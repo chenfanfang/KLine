@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  KLine
+//
+//  Created by 陈蕃坊 on 2017/7/29.
+//  Copyright © 2017年 DanDanLiCai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+//=================================================================
+//                           枚举
+//=================================================================
+#pragma mark - 枚举
+
+typedef NS_ENUM(NSInteger, ChartsType) {
+    //分时图
+    ChartsType_TimeLine = 0,
+    //日K
+    ChartsType_DayKLine,
+    //周K
+    ChartsType_WeekKLine,
+    //月K
+    ChartsType_MonthKLine
+};
+
+
+//=================================================================
+//                           const
+//=================================================================
+#pragma mark - const
+
+//股票信息+选择k线图类型 的那个view的高度
+#define TopViewHeight 100
+
+//距离屏幕的距离
+#define Margin 10
+
+//LinechartView在scrollView中的高度比例
+#define LinechartHeightRate 0.7
+
+//=================================================================
+//                           颜色
+//=================================================================
+#pragma mark - 颜色
+
+// RGB颜色
+#define FFRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define FFColor(r, g, b) FFRGBColor(r, g, b, 1)
+
+#define BackgroundColor FFColor(33,45,65)
+
+//=================================================================
+//                           import
+//=================================================================
+#pragma mark - import
+
+#import <Masonry.h>
+
+
+#endif /* PrefixHeader_pch */
