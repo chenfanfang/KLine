@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>data</key>
+			<array>
+				<string>0931 5.350 1700000 9097390</string>
+				<string>0935 5.320 198000 1054570</string>
+				<string>0939 5.320 224000 1191680</string>
+				<string>0943 5.330 496000 2648020</string>
+				<string>0947 5.350 473000 2530450</string>
+				<string>0951 5.380 1588000 8544170</string>
+				<string>0955 5.380 104000 560540</string>
+				<string>0959 5.380 30000 161420</string>
+				<string>1003 5.380 572000 3078460</string>
+				<string>1007 5.380 123000 661740</string>
+				<string>1011 5.380 759000 4082730</string>
+				<string>1015 5.370 420000 2259060</string>
+				<string>1019 5.370 606000 3254420</string>
+				<string>1023 5.370 95000 510210</string>
+				<string>1027 5.370 1211000 6503070</string>
+				<string>1031 5.370 221000 1185750</string>
+				<string>1035 5.370 148000 794760</string>
+				<string>1039 5.370 107000 574760</string>
+				<string>1043 5.370 662000 3554780</string>
+				<string>1047 5.370 206000 1107710</string>
+				<string>1051 5.370 254000 1365480</string>
+				<string>1055 5.370 282000 1516270</string>
+				<string>1059 5.370 211000 1134540</string>
+				<string>1103 5.380 612000 3294570</string>
+				<string>1107 5.380 303000 1631800</string>
+				<string>1111 5.380 269000 1446690</string>
+				<string>1115 5.370 280000 1505130</string>
+				<string>1119 5.380 333000 1789700</string>
+				<string>1123 5.370 385000 2069460</string>
+				<string>1127 5.380 282000 1515800</string>
+				<string>1131 5.370 310000 1666150</string>
+				<string>1135 5.370 349000 1875520</string>
+				<string>1139 5.370 285000 1532210</string>
+				<string>1143 5.380 430000 2314920</string>
+				<string>1147 5.380 369000 1986880</string>
+				<string>1151 5.390 293000 1577830</string>
+				<string>1155 5.370 266000 1430000</string>
+				<string>1159 5.380 327000 1757960</string>
+				<string>1303 5.370 386000 2075480</string>
+				<string>1307 5.370 318000 1709680</string>
+				<string>1311 5.380 403000 2165610</string>
+				<string>1315 5.370 374000 2010930</string>
+				<string>1319 5.370 495000 2659790</string>
+				<string>1323 5.370 297000 1596350</string>
+				<string>1327 5.370 380000 2041970</string>
+				<string>1331 5.370 466000 2504190</string>
+				<string>1335 5.370 344000 1848850</string>
+				<string>1339 5.370 618000 3322990</string>
+				<string>1343 5.370 297000 1596410</string>
+				<string>1347 5.360 3537000 18992290</string>
+				<string>1351 5.360 345000 1850940</string>
+				<string>1355 5.360 454000 2434940</string>
+				<string>1359 5.350 386000 2066800</string>
+				<string>1403 5.350 352000 1884580</string>
+				<string>1407 5.350 270000 1446110</string>
+				<string>1411 5.360 1745000 9352630</string>
+				<string>1415 5.340 1169000 6253000</string>
+				<string>1419 5.350 699000 3741250</string>
+				<string>1423 5.350 303000 1622440</string>
+				<string>1427 5.340 2198000 11758500</string>
+				<string>1431 5.350 1237000 6618730</string>
+				<string>1435 5.350 349000 1868630</string>
+				<string>1439 5.360 809000 4337080</string>
+				<string>1443 5.370 323000 1732860</string>
+				<string>1447 5.370 526000 2820820</string>
+				<string>1451 5.370 309000 1657870</string>
+				<string>1455 5.370 334000 1791630</string>
+				<string>1459 5.360 252000 1352110</string>
+				<string>1503 5.380 796000 4277740</string>
+				<string>1507 5.360 299000 1604150</string>
+				<string>1511 5.360 383000 2054450</string>
+				<string>1515 5.360 310000 1663020</string>
+				<string>1519 5.360 238000 1277100</string>
+				<string>1523 5.360 261000 1400360</string>
+				<string>1527 5.360 357000 1914990</string>
+				<string>1531 5.380 442000 2375160</string>
+				<string>1535 5.370 671000 3604770</string>
+				<string>1539 5.380 522000 2806140</string>
+				<string>1543 5.380 505000 2714410</string>
+				<string>1547 5.370 880000 4731290</string>
+				<string>1551 5.370 622000 3343750</string>
+				<string>1555 5.370 652000 3503750</string>
+				<string>1559 5.390 4124000 22186970</string>
+			</array>
+			<key>date</key>
+			<string>20170724</string>
+			<key>zsj</key>
+			<string>5.360</string>
+		</dict>
+		<dict>
+			<key>data</key>
+			<array>
+				<string>0931 5.380 1713000 9208390</string>
+				<string>0935 5.370 38000 204060</string>
+				<string>0939 5.370 70000 376080</string>
+				<string>0943 5.370 1744000 9364430</string>
+				<string>0947 5.360 146000 782570</string>
+				<string>0951 5.360 120000 643210</string>
+				<string>0955 5.360 667000 3574960</string>
+				<string>0959 5.370 322000 1728610</string>
+				<string>1003 5.380 777000 4178820</string>
+				<string>1007 5.380 1133000 6098280</string>
+				<string>1011 5.390 835000 4496000</string>
+				<string>1015 5.370 1050000 5650130</string>
+				<string>1019 5.390 548000 2952670</string>
+				<string>1023 5.390 814000 4384610</string>
+				<string>1027 5.380 760000 4095450</string>
+				<string>1031 5.390 399000 2153810</string>
+				<string>1035 5.400 1118000 6036600</string>
+				<string>1039 5.400 271000 1463020</string>
+				<string>1043 5.400 509000 2747770</string>
+				<string>1047 5.440 4305000 23380150</string>
+				<string>1051 5.430 414000 2243820</string>
+				<string>1055 5.430 426000 2312800</string>
+				<string>1059 5.430 462000 2508020</string>
+				<string>1103 5.430 366000 1987010</string>
+				<string>1107 5.430 423000 2296060</string>
+				<string>1111 5.430 377000 2046520</string>
+				<string>1115 5.430 460000 2496950</string>
+				<string>1119 5.420 412000 2235990</string>
+				<string>1123 5.410 326000 1765990</string>
+				<string>1127 5.420 478000 2590390</string>
+				<string>1131 5.410 320000 1734070</string>
+				<string>1135 5.410 303000 1641710</string>
+				<string>1139 5.410 432000 2339360</string>
+				<string>1143 5.410 317000 1717180</string>
+				<string>1147 5.410 409000 2214990</string>
+				<string>1151 5.420 297000 1609310</string>
+				<string>1155 5.410 498000 2696870</string>
+				<string>1159 5.420 404000 2188560</string>
+				<string>1303 5.410 480000 2596070</string>
+				<string>1307 5.410 291000 1573980</string>
+				<string>1311 5.410 304000 1644200</string>
+				<string>1315 5.410 290000 1568560</string>
+				<string>1319 5.400 392000 2119790</string>
+				<string>1323 5.400 553000 2991290</string>
+				<string>1327 5.400 301000 1628070</string>
+				<string>1331 5.410 397000 2147340</string>
+				<string>1335 5.400 315000 1703820</string>
+				<string>1339 5.410 491000 2656050</string>
+				<string>1343 5.410 290000 1568660</string>
+				<string>1347 5.410 315000 1703420</string>
+				<string>1351 5.400 271000 1463160</string>
+				<string>1355 5.400 402000 2173100</string>
+				<string>1359 5.400 613000 3310220</string>
+				<string>1403 5.400 606000 3272060</string>
+				<string>1407 5.390 1344000 7257370</string>
+				<string>1411 5.400 611000 3304450</string>
+				<string>1415 5.390 1042000 5631710</string>
+				<string>1419 5.400 1438000 7769770</string>
+				<string>1423 5.400 563000 3042130</string>
+				<string>1427 5.390 735000 3968610</string>
+				<string>1431 5.400 560000 3029360</string>
+				<string>1435 5.400 592000 3202440</string>
+				<string>1439 5.400 641000 3467000</string>
+				<string>1443 5.390 2340000 12641730</string>
+				<string>1447 5.400 924000 4994940</string>
+				<string>1451 5.400 677000 3661610</string>
+				<string>1455 5.410 757000 4096070</string>
+				<string>1459 5.410 773000 4187310</string>
+				<string>1503 5.410 579000 3137760</string>
+				<string>1507 5.410 633000 3429890</string>
+				<string>1511 5.420 1063000 5760900</string>
+				<string>1515 5.420 573000 3105410</string>
+				<string>1519 5.420 1159000 6290560</string>
+				<string>1523 5.420 943000 5111090</string>
+				<string>1527 5.410 238000 1287610</string>
+				<string>1531 5.400 139000 750650</string>
+				<string>1535 5.400 4076000 22009480</string>
+				<string>1539 5.410 2707000 14618340</string>
+				<string>1543 5.400 384000 2075000</string>
+				<string>1547 5.410 1419000 7667670</string>
+				<string>1551 5.410 184000 994950</string>
+				<string>1555 5.410 1045000 5653220</string>
+				<string>1559 5.410 571000 3087920</string>
+			</array>
+			<key>date</key>
+			<string>20170725</string>
+			<key>zsj</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>data</key>
+			<array>
+				<string>0931 5.410 1794000 9704930</string>
+				<string>0935 5.420 880000 4769740</string>
+				<string>0939 5.440 86000 467710</string>
+				<string>0943 5.440 1837000 9985180</string>
+				<string>0947 5.430 983000 5344720</string>
+				<string>0951 5.440 679000 3693900</string>
+				<string>0955 5.440 727000 3954870</string>
+				<string>0959 5.420 185000 1004410</string>
+				<string>1003 5.400 1833000 9904840</string>
+				<string>1007 5.410 229000 1236820</string>
+				<string>1011 5.420 321000 1739980</string>
+				<string>1015 5.420 0 0</string>
+				<string>1019 5.410 27000 146330</string>
+				<string>1023 5.410 0 0</string>
+				<string>1027 5.420 344000 1864280</string>
+				<string>1031 5.410 3110000 16825050</string>
+				<string>1035 5.420 497000 2689700</string>
+				<string>1039 5.410 25000 135290</string>
+				<string>1043 5.400 167000 903410</string>
+				<string>1047 5.410 328000 1774430</string>
+				<string>1051 5.410 879000 4751410</string>
+				<string>1055 5.400 451000 2438360</string>
+				<string>1059 5.410 322000 1742020</string>
+				<string>1103 5.400 18000 97200</string>
+				<string>1107 5.410 104000 562600</string>
+				<string>1111 5.410 449000 2428900</string>
+				<string>1115 5.420 779000 4217380</string>
+				<string>1119 5.420 492000 2666490</string>
+				<string>1123 5.410 378000 2047910</string>
+				<string>1127 5.410 453000 2454670</string>
+				<string>1131 5.410 175000 946100</string>
+				<string>1135 5.410 285000 1541690</string>
+				<string>1139 5.400 431000 2330340</string>
+				<string>1143 5.400 419000 2262590</string>
+				<string>1147 5.400 22000 118820</string>
+				<string>1151 5.410 100000 541000</string>
+				<string>1155 5.410 220000 1190000</string>
+				<string>1159 5.410 638000 3450630</string>
+				<string>1303 5.410 388000 2099080</string>
+				<string>1307 5.410 510000 2762720</string>
+				<string>1311 5.420 328000 1777760</string>
+				<string>1315 5.420 409000 2216580</string>
+				<string>1319 5.420 560000 3034100</string>
+				<string>1323 5.420 486000 2634120</string>
+				<string>1327 5.410 545000 2952570</string>
+				<string>1331 5.420 291000 1577220</string>
+				<string>1335 5.410 928000 5029260</string>
+				<string>1339 5.420 491000 2660950</string>
+				<string>1343 5.430 1360000 7384240</string>
+				<string>1347 5.430 542000 2942480</string>
+				<string>1351 5.420 815000 4424850</string>
+				<string>1355 5.430 407000 2209740</string>
+				<string>1359 5.410 292000 1582130</string>
+				<string>1403 5.420 286000 1552700</string>
+				<string>1407 5.420 471000 2555850</string>
+				<string>1411 5.420 341000 1851160</string>
+				<string>1415 5.420 789000 4275800</string>
+				<string>1419 5.420 1552000 8410970</string>
+				<string>1423 5.420 398000 2160070</string>
+				<string>1427 5.420 470000 2550430</string>
+				<string>1431 5.430 367000 1992600</string>
+				<string>1435 5.430 2087000 11328780</string>
+				<string>1439 5.420 870000 4723050</string>
+				<string>1443 5.430 502000 2725160</string>
+				<string>1447 5.430 993000 5394970</string>
+				<string>1451 5.430 292000 1585560</string>
+				<string>1455 5.420 294000 1596010</string>
+				<string>1459 5.430 1965000 10669950</string>
+				<string>1503 5.430 579000 3146740</string>
+				<string>1507 5.440 1102000 5994860</string>
+				<string>1511 5.440 1035000 5639640</string>
+				<string>1515 5.450 3217000 17532650</string>
+				<string>1519 5.450 745000 4058330</string>
+				<string>1523 5.470 5684000 31090440</string>
+				<string>1527 5.460 5095000 27840100</string>
+				<string>1531 5.460 3607000 19727770</string>
+				<string>1535 5.460 460000 2514670</string>
+				<string>1539 5.470 853000 4667840</string>
+				<string>1543 5.470 4168000 22797980</string>
+				<string>1547 5.470 691000 3778920</string>
+				<string>1551 5.460 671000 3668660</string>
+				<string>1555 5.470 614000 3357390</string>
+				<string>1559 5.470 2433000 13319960</string>
+			</array>
+			<key>date</key>
+			<string>20170726</string>
+			<key>zsj</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>data</key>
+			<array>
+				<string>0931 5.480 2535000 13879830</string>
+				<string>0935 5.480 261000 1430280</string>
+				<string>0939 5.470 89000 487100</string>
+				<string>0943 5.480 173000 947670</string>
+				<string>0947 5.450 4377000 23932880</string>
+				<string>0951 5.450 283000 1542750</string>
+				<string>0955 5.440 177000 964240</string>
+				<string>0959 5.430 233000 1265590</string>
+				<string>1003 5.440 125000 680550</string>
+				<string>1007 5.450 677000 3689450</string>
+				<string>1011 5.460 2545000 13890010</string>
+				<string>1015 5.470 193000 1054690</string>
+				<string>1019 5.470 102000 557910</string>
+				<string>1023 5.470 3061000 16769700</string>
+				<string>1027 5.480 978000 5359220</string>
+				<string>1031 5.480 1417000 7753440</string>
+				<string>1035 5.480 262000 1433840</string>
+				<string>1039 5.460 509000 2778570</string>
+				<string>1043 5.450 93000 507520</string>
+				<string>1047 5.450 115000 627620</string>
+				<string>1051 5.440 2305000 12562020</string>
+				<string>1055 5.450 153000 833610</string>
+				<string>1059 5.450 284000 1547520</string>
+				<string>1103 5.450 1632000 8902170</string>
+				<string>1107 5.450 353000 1927120</string>
+				<string>1111 5.450 446000 2434500</string>
+				<string>1115 5.460 714000 3897280</string>
+				<string>1119 5.460 458000 2504900</string>
+				<string>1123 5.460 54000 294850</string>
+				<string>1127 5.470 245000 1337800</string>
+				<string>1131 5.470 490000 2680010</string>
+				<string>1135 5.470 439000 2401020</string>
+				<string>1139 5.460 509000 2783610</string>
+				<string>1143 5.460 489000 2673850</string>
+				<string>1147 5.460 852000 4659450</string>
+				<string>1151 5.460 497000 2717920</string>
+				<string>1155 5.460 438000 2394810</string>
+				<string>1159 5.460 425000 2324400</string>
+				<string>1303 5.470 423000 2313460</string>
+				<string>1307 5.460 1221000 6670620</string>
+				<string>1311 5.470 515000 2817020</string>
+				<string>1315 5.460 460000 2515720</string>
+				<string>1319 5.470 1155000 6317780</string>
+				<string>1323 5.470 2782000 15217510</string>
+				<string>1327 5.470 377000 2062160</string>
+				<string>1331 5.470 548000 2997530</string>
+				<string>1335 5.470 681000 3728220</string>
+				<string>1339 5.460 74000 404040</string>
+				<string>1343 5.460 379000 2073090</string>
+				<string>1347 5.460 447000 2444180</string>
+				<string>1351 5.470 491000 2685660</string>
+				<string>1355 5.480 1720000 9431140</string>
+				<string>1359 5.490 690000 3785560</string>
+				<string>1403 5.480 364000 1998070</string>
+				<string>1407 5.480 538000 2951510</string>
+				<string>1411 5.480 1670000 9154820</string>
+				<string>1415 5.480 467000 2559010</string>
+				<string>1419 5.480 446000 2447030</string>
+				<string>1423 5.480 464000 2546850</string>
+				<string>1427 5.480 977000 5359240</string>
+				<string>1431 5.490 1333000 7318080</string>
+				<string>1435 5.490 439000 2409360</string>
+				<string>1439 5.490 751000 4121690</string>
+				<string>1443 5.480 804000 4413850</string>
+				<string>1447 5.480 4806000 26399680</string>
+				<string>1451 5.480 760000 4172270</string>
+				<string>1455 5.490 477000 2618100</string>
+				<string>1459 5.490 442000 2426030</string>
+				<string>1503 5.490 933000 5120030</string>
+				<string>1507 5.490 1019000 5594280</string>
+				<string>1511 5.490 527000 2893000</string>
+				<string>1515 5.490 475000 2607520</string>
+				<string>1519 5.480 1752000 9619680</string>
+				<string>1523 5.490 718000 3940720</string>
+				<string>1527 5.480 354000 1943380</string>
+				<string>1531 5.490 362000 1987090</string>
+				<string>1535 5.480 717000 3933030</string>
+				<string>1539 5.490 789000 4330340</string>
+				<string>1543 5.490 1152000 6318840</string>
+				<string>1547 5.490 595000 3266280</string>
+				<string>1551 5.490 810000 4446190</string>
+				<string>1555 5.490 1463000 8028600</string>
+				<string>1559 5.480 499000 2738300</string>
+			</array>
+			<key>date</key>
+			<string>20170727</string>
+			<key>zsj</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>data</key>
+			<array>
+				<string>0931 5.420 3042000 16473170</string>
+				<string>0935 5.400 2376000 12814530</string>
+				<string>0939 5.420 4489000 24285890</string>
+				<string>0943 5.410 372000 2015390</string>
+				<string>0947 5.420 2357000 12759780</string>
+				<string>0951 5.430 566000 3071940</string>
+				<string>0955 5.440 716000 3891380</string>
+				<string>0959 5.440 476000 2589230</string>
+				<string>1003 5.440 719000 3911360</string>
+				<string>1007 5.420 5836000 31664900</string>
+				<string>1011 5.440 489000 2659260</string>
+				<string>1015 5.430 1552000 8426860</string>
+				<string>1019 5.430 484000 2629770</string>
+				<string>1023 5.430 366000 1990120</string>
+				<string>1027 5.440 490000 2664790</string>
+				<string>1031 5.440 1130000 6140900</string>
+				<string>1035 5.430 2652000 14403500</string>
+				<string>1039 5.430 320000 1740220</string>
+				<string>1043 5.440 281000 1528640</string>
+				<string>1047 5.430 562000 3057240</string>
+				<string>1051 5.430 579000 3146630</string>
+				<string>1055 5.420 285000 1544700</string>
+				<string>1059 5.410 32000 173140</string>
+				<string>1103 5.420 315000 1707300</string>
+				<string>1107 5.420 1212000 6568730</string>
+				<string>1111 5.420 461000 2502230</string>
+				<string>1115 5.420 597000 3238510</string>
+				<string>1119 5.410 559000 3029680</string>
+				<string>1123 5.410 385000 2082640</string>
+				<string>1127 5.430 262000 1422660</string>
+				<string>1131 5.420 649000 3524990</string>
+				<string>1135 5.420 441000 2393040</string>
+				<string>1139 5.430 296000 1607130</string>
+				<string>1143 5.430 291000 1580120</string>
+				<string>1147 5.420 583000 3158400</string>
+				<string>1151 5.420 871000 4720420</string>
+				<string>1155 5.410 308000 1669150</string>
+				<string>1159 5.410 312000 1690910</string>
+				<string>1303 5.410 307000 1663850</string>
+				<string>1307 5.420 337000 1826540</string>
+				<string>1311 5.390 1365000 7370490</string>
+				<string>1315 5.410 52000 281300</string>
+				<string>1319 5.390 35000 188800</string>
+				<string>1323 5.390 42000 226620</string>
+				<string>1327 5.400 387000 2089800</string>
+				<string>1331 5.390 489000 2637690</string>
+				<string>1335 5.390 46000 247940</string>
+				<string>1339 5.400 1397000 7543560</string>
+				<string>1343 5.410 121000 654270</string>
+				<string>1347 5.410 181000 978970</string>
+				<string>1351 5.410 521000 2817370</string>
+				<string>1355 5.410 421000 2276650</string>
+				<string>1359 5.400 930000 5029330</string>
+				<string>1403 5.410 450000 2433190</string>
+				<string>1407 5.410 326000 1765730</string>
+				<string>1411 5.410 535000 2893210</string>
+				<string>1415 5.400 326000 1763270</string>
+				<string>1419 5.410 288000 1557840</string>
+				<string>1423 5.410 1747000 9450810</string>
+				<string>1427 5.420 352000 1907390</string>
+				<string>1431 5.420 446000 2416860</string>
+				<string>1435 5.420 342000 1853330</string>
+				<string>1439 5.420 349000 1891380</string>
+				<string>1443 5.420 430000 2330420</string>
+				<string>1447 5.440 270000 1468800</string>
+				<string>1451 5.420 505000 2735320</string>
+				<string>1455 5.420 796000 4314320</string>
+				<string>1459 5.430 1740000 9447950</string>
+				<string>1503 5.430 540000 2932200</string>
+				<string>1507 5.430 361000 1959930</string>
+				<string>1511 5.430 1004000 5453740</string>
+				<string>1515 5.420 604000 3279700</string>
+				<string>1519 5.430 295000 1601850</string>
+				<string>1523 5.430 800000 4344000</string>
+				<string>1527 5.430 428000 2323360</string>
+				<string>1531 5.400 7633000 41293000</string>
+				<string>1535 5.420 427000 2313960</string>
+				<string>1539 5.420 2280000 12362220</string>
+				<string>1543 5.400 1000 5400</string>
+				<string>1547 5.400 245000 1324670</string>
+				<string>1551 5.410 554000 3001890</string>
+				<string>1555 5.420 1746000 9461710</string>
+				<string>1559 5.410 472000 2554650</string>
+				<string>1600 5.420 198000 1071810</string>
+			</array>
+			<key>date</key>
+			<string>20170728</string>
+			<key>zsj</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>

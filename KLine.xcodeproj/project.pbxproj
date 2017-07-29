@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3325E1EE0AAC56A6214D493B /* libPods-KLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53B1421AF9724D52AED88F6 /* libPods-KLine.a */; };
+		F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */; };
+		F656A0411F2C33AF007ED3EE /* dayKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03C1F2C33AF007ED3EE /* dayKLine.plist */; };
+		F656A0421F2C33AF007ED3EE /* monthKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03D1F2C33AF007ED3EE /* monthKLine.plist */; };
+		F656A0431F2C33AF007ED3EE /* severalDaysTimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */; };
+		F656A0441F2C33AF007ED3EE /* timeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03F1F2C33AF007ED3EE /* timeLine.plist */; };
+		F656A0451F2C33AF007ED3EE /* weekKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A0401F2C33AF007ED3EE /* weekKLine.plist */; };
+		F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A04F1F2C508D007ED3EE /* ChartsMainView.m */; };
+		F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0571F2C5151007ED3EE /* ChartsTopView.m */; };
+		F6C2418A1F25FF1500523628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C241891F25FF1500523628 /* main.m */; };
+		F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2418C1F25FF1500523628 /* AppDelegate.m */; };
+		F6C241901F25FF1500523628 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2418F1F25FF1500523628 /* HomeViewController.m */; };
+		F6C241951F25FF1500523628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C241941F25FF1500523628 /* Assets.xcassets */; };
+		F6C241981F25FF1500523628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C241961F25FF1500523628 /* LaunchScreen.storyboard */; };
+		F6C241A31F25FF1600523628 /* KLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C241A21F25FF1600523628 /* KLineTests.m */; };
+		F6C241AE1F25FF1600523628 /* KLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C241AD1F25FF1600523628 /* KLineUITests.m */; };
+		F6EBB81C1F27496E00ED3B15 /* HttpsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EBB81B1F27496E00ED3B15 /* HttpsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6C2419F1F25FF1500523628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6C2417D1F25FF1500523628 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C241841F25FF1500523628;
+			remoteInfo = KLine;
+		};
+		F6C241AA1F25FF1600523628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6C2417D1F25FF1500523628 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C241841F25FF1500523628;
+			remoteInfo = KLine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KLine/Pods-KLine.release.xcconfig"; sourceTree = "<group>"; };
+		BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KLine/Pods-KLine.debug.xcconfig"; sourceTree = "<group>"; };
+		E53B1421AF9724D52AED88F6 /* libPods-KLine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KLine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F656A0331F2C2EC8007ED3EE /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
+		F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
+		F656A03C1F2C33AF007ED3EE /* dayKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dayKLine.plist; sourceTree = "<group>"; };
+		F656A03D1F2C33AF007ED3EE /* monthKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = monthKLine.plist; sourceTree = "<group>"; };
+		F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = severalDaysTimeLine.plist; sourceTree = "<group>"; };
+		F656A03F1F2C33AF007ED3EE /* timeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timeLine.plist; sourceTree = "<group>"; };
+		F656A0401F2C33AF007ED3EE /* weekKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weekKLine.plist; sourceTree = "<group>"; };
+		F656A04E1F2C508D007ED3EE /* ChartsMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsMainView.h; sourceTree = "<group>"; };
+		F656A04F1F2C508D007ED3EE /* ChartsMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsMainView.m; sourceTree = "<group>"; };
+		F656A0561F2C5151007ED3EE /* ChartsTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsTopView.h; sourceTree = "<group>"; };
+		F656A0571F2C5151007ED3EE /* ChartsTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsTopView.m; sourceTree = "<group>"; };
+		F6C241851F25FF1500523628 /* KLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C241891F25FF1500523628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6C2418B1F25FF1500523628 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F6C2418C1F25FF1500523628 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F6C2418E1F25FF1500523628 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F6C2418F1F25FF1500523628 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		F6C241941F25FF1500523628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6C241971F25FF1500523628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6C241991F25FF1500523628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C2419E1F25FF1500523628 /* KLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C241A21F25FF1600523628 /* KLineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLineTests.m; sourceTree = "<group>"; };
+		F6C241A41F25FF1600523628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C241A91F25FF1600523628 /* KLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C241AD1F25FF1600523628 /* KLineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLineUITests.m; sourceTree = "<group>"; };
+		F6C241AF1F25FF1600523628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6EBB81A1F27496E00ED3B15 /* HttpsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsManager.h; sourceTree = "<group>"; };
+		F6EBB81B1F27496E00ED3B15 /* HttpsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6C241821F25FF1500523628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3325E1EE0AAC56A6214D493B /* libPods-KLine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C2419B1F25FF1500523628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C241A61F25FF1600523628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E26EB49B3D84B5072662CDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E53B1421AF9724D52AED88F6 /* libPods-KLine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		688215FA123C70F7BF0D3055 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */,
+				20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F656A03B1F2C33AF007ED3EE /* 工商银行数据 */ = {
+			isa = PBXGroup;
+			children = (
+				F656A03C1F2C33AF007ED3EE /* dayKLine.plist */,
+				F656A03D1F2C33AF007ED3EE /* monthKLine.plist */,
+				F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */,
+				F656A03F1F2C33AF007ED3EE /* timeLine.plist */,
+				F656A0401F2C33AF007ED3EE /* weekKLine.plist */,
+			);
+			path = "工商银行数据";
+			sourceTree = "<group>";
+		};
+		F656A04B1F2C508D007ED3EE /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				F656A04D1F2C508D007ED3EE /* MainView */,
+				F656A0551F2C50AC007ED3EE /* ButtomView */,
+				F656A0501F2C508D007ED3EE /* TopView */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		F656A04D1F2C508D007ED3EE /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				F656A04E1F2C508D007ED3EE /* ChartsMainView.h */,
+				F656A04F1F2C508D007ED3EE /* ChartsMainView.m */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		F656A0501F2C508D007ED3EE /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				F656A0591F2C5160007ED3EE /* SelectView */,
+				F656A0511F2C508D007ED3EE /* MainView */,
+				F656A0531F2C508D007ED3EE /* StockMsgView */,
+			);
+			path = TopView;
+			sourceTree = "<group>";
+		};
+		F656A0511F2C508D007ED3EE /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				F656A0561F2C5151007ED3EE /* ChartsTopView.h */,
+				F656A0571F2C5151007ED3EE /* ChartsTopView.m */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		F656A0531F2C508D007ED3EE /* StockMsgView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StockMsgView;
+			sourceTree = "<group>";
+		};
+		F656A0551F2C50AC007ED3EE /* ButtomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ButtomView;
+			sourceTree = "<group>";
+		};
+		F656A0591F2C5160007ED3EE /* SelectView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectView;
+			sourceTree = "<group>";
+		};
+		F6C2417C1F25FF1500523628 = {
+			isa = PBXGroup;
+			children = (
+				F6C241871F25FF1500523628 /* KLine */,
+				F6C241A11F25FF1600523628 /* KLineTests */,
+				F6C241AC1F25FF1600523628 /* KLineUITests */,
+				F6C241861F25FF1500523628 /* Products */,
+				688215FA123C70F7BF0D3055 /* Pods */,
+				0E26EB49B3D84B5072662CDA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F6C241861F25FF1500523628 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6C241851F25FF1500523628 /* KLine.app */,
+				F6C2419E1F25FF1500523628 /* KLineTests.xctest */,
+				F6C241A91F25FF1600523628 /* KLineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6C241871F25FF1500523628 /* KLine */ = {
+			isa = PBXGroup;
+			children = (
+				F656A04B1F2C508D007ED3EE /* Charts */,
+				F6EBB8191F27494600ED3B15 /* Tools */,
+				F6C2418B1F25FF1500523628 /* AppDelegate.h */,
+				F6C2418C1F25FF1500523628 /* AppDelegate.m */,
+				F6C2418E1F25FF1500523628 /* HomeViewController.h */,
+				F6C2418F1F25FF1500523628 /* HomeViewController.m */,
+				F656A0331F2C2EC8007ED3EE /* FullScreenViewController.h */,
+				F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */,
+				F6C241941F25FF1500523628 /* Assets.xcassets */,
+				F6C241961F25FF1500523628 /* LaunchScreen.storyboard */,
+				F6C241991F25FF1500523628 /* Info.plist */,
+				F6C241881F25FF1500523628 /* Supporting Files */,
+			);
+			path = KLine;
+			sourceTree = "<group>";
+		};
+		F6C241881F25FF1500523628 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F656A03B1F2C33AF007ED3EE /* 工商银行数据 */,
+				F6C241891F25FF1500523628 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6C241A11F25FF1600523628 /* KLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C241A21F25FF1600523628 /* KLineTests.m */,
+				F6C241A41F25FF1600523628 /* Info.plist */,
+			);
+			path = KLineTests;
+			sourceTree = "<group>";
+		};
+		F6C241AC1F25FF1600523628 /* KLineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C241AD1F25FF1600523628 /* KLineUITests.m */,
+				F6C241AF1F25FF1600523628 /* Info.plist */,
+			);
+			path = KLineUITests;
+			sourceTree = "<group>";
+		};
+		F6EBB8191F27494600ED3B15 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F6EBB81A1F27496E00ED3B15 /* HttpsManager.h */,
+				F6EBB81B1F27496E00ED3B15 /* HttpsManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6C241841F25FF1500523628 /* KLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C241B21F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLine" */;
+			buildPhases = (
+				B4EB5DA1FCB62D22FB7F9561 /* [CP] Check Pods Manifest.lock */,
+				F6C241811F25FF1500523628 /* Sources */,
+				F6C241821F25FF1500523628 /* Frameworks */,
+				F6C241831F25FF1500523628 /* Resources */,
+				C2F488CFD988062E9F447D46 /* [CP] Embed Pods Frameworks */,
+				7D890F7919C81BB90F92F282 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLine;
+			productName = KLine;
+			productReference = F6C241851F25FF1500523628 /* KLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6C2419D1F25FF1500523628 /* KLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C241B51F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLineTests" */;
+			buildPhases = (
+				F6C2419A1F25FF1500523628 /* Sources */,
+				F6C2419B1F25FF1500523628 /* Frameworks */,
+				F6C2419C1F25FF1500523628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6C241A01F25FF1500523628 /* PBXTargetDependency */,
+			);
+			name = KLineTests;
+			productName = KLineTests;
+			productReference = F6C2419E1F25FF1500523628 /* KLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F6C241A81F25FF1600523628 /* KLineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C241B81F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLineUITests" */;
+			buildPhases = (
+				F6C241A51F25FF1600523628 /* Sources */,
+				F6C241A61F25FF1600523628 /* Frameworks */,
+				F6C241A71F25FF1600523628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6C241AB1F25FF1600523628 /* PBXTargetDependency */,
+			);
+			name = KLineUITests;
+			productName = KLineUITests;
+			productReference = F6C241A91F25FF1600523628 /* KLineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6C2417D1F25FF1500523628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = DanDanLiCai;
+				TargetAttributes = {
+					F6C241841F25FF1500523628 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					F6C2419D1F25FF1500523628 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F6C241841F25FF1500523628;
+					};
+					F6C241A81F25FF1600523628 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F6C241841F25FF1500523628;
+					};
+				};
+			};
+			buildConfigurationList = F6C241801F25FF1500523628 /* Build configuration list for PBXProject "KLine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6C2417C1F25FF1500523628;
+			productRefGroup = F6C241861F25FF1500523628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6C241841F25FF1500523628 /* KLine */,
+				F6C2419D1F25FF1500523628 /* KLineTests */,
+				F6C241A81F25FF1600523628 /* KLineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6C241831F25FF1500523628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C241981F25FF1500523628 /* LaunchScreen.storyboard in Resources */,
+				F656A0411F2C33AF007ED3EE /* dayKLine.plist in Resources */,
+				F6C241951F25FF1500523628 /* Assets.xcassets in Resources */,
+				F656A0421F2C33AF007ED3EE /* monthKLine.plist in Resources */,
+				F656A0431F2C33AF007ED3EE /* severalDaysTimeLine.plist in Resources */,
+				F656A0451F2C33AF007ED3EE /* weekKLine.plist in Resources */,
+				F656A0441F2C33AF007ED3EE /* timeLine.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C2419C1F25FF1500523628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C241A71F25FF1600523628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D890F7919C81BB90F92F282 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KLine/Pods-KLine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4EB5DA1FCB62D22FB7F9561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F488CFD988062E9F447D46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KLine/Pods-KLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6C241811F25FF1500523628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C241901F25FF1500523628 /* HomeViewController.m in Sources */,
+				F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */,
+				F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */,
+				F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */,
+				F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */,
+				F6C2418A1F25FF1500523628 /* main.m in Sources */,
+				F6EBB81C1F27496E00ED3B15 /* HttpsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C2419A1F25FF1500523628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C241A31F25FF1600523628 /* KLineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C241A51F25FF1600523628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C241AE1F25FF1600523628 /* KLineUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6C241A01F25FF1500523628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6C241841F25FF1500523628 /* KLine */;
+			targetProxy = F6C2419F1F25FF1500523628 /* PBXContainerItemProxy */;
+		};
+		F6C241AB1F25FF1600523628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6C241841F25FF1500523628 /* KLine */;
+			targetProxy = F6C241AA1F25FF1600523628 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6C241961F25FF1500523628 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6C241971F25FF1500523628 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6C241B01F25FF1600523628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6C241B11F25FF1600523628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6C241B31F25FF1600523628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F6C241B41F25FF1600523628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F6C241B61F25FF1600523628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLine.app/KLine";
+			};
+			name = Debug;
+		};
+		F6C241B71F25FF1600523628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLine.app/KLine";
+			};
+			name = Release;
+		};
+		F6C241B91F25FF1600523628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KLine;
+			};
+			name = Debug;
+		};
+		F6C241BA1F25FF1600523628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KLine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6C241801F25FF1500523628 /* Build configuration list for PBXProject "KLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C241B01F25FF1600523628 /* Debug */,
+				F6C241B11F25FF1600523628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C241B21F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C241B31F25FF1600523628 /* Debug */,
+				F6C241B41F25FF1600523628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C241B51F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C241B61F25FF1600523628 /* Debug */,
+				F6C241B71F25FF1600523628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C241B81F25FF1600523628 /* Build configuration list for PBXNativeTarget "KLineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C241B91F25FF1600523628 /* Debug */,
+				F6C241BA1F25FF1600523628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6C2417D1F25FF1500523628 /* Project object */;
+}
