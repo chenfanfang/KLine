@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Const : NSObject
+//=================================================================
+//                           枚举
+//=================================================================
+#pragma mark - 枚举
 
-@end
+typedef NS_ENUM(NSInteger, ChartsType) {
+    //分时图
+    ChartsType_TimeLine = 0,
+    //日K
+    ChartsType_DayKLine,
+    //周K
+    ChartsType_WeekKLine,
+    //月K
+    ChartsType_MonthKLine
+};

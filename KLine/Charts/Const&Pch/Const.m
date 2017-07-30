@@ -8,6 +8,3 @@
 
 #import "Const.h"
 
-@implementation Const
-
-@end

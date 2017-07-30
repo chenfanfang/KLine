@@ -10,4 +10,22 @@
 
 @interface TimeLineModel : NSObject
 
+/** 时间 */
+@property (nonatomic, copy) NSString *time;
+
+/** 价钱 */
+@property (nonatomic, assign) CGFloat price;
+
+/** 均价 */
+@property (nonatomic, assign) CGFloat averagePrice;
+
+/** 成交数 */
+@property (nonatomic, assign) NSInteger amount;
+
+/** 成交金额 */
+@property (nonatomic, assign) NSInteger totalMoney;
+
+
++ (instancetype)modelWithDataArr:(NSArray *)dataArr;
+
 @end

@@ -16,6 +16,14 @@
 		F656A0451F2C33AF007ED3EE /* weekKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A0401F2C33AF007ED3EE /* weekKLine.plist */; };
 		F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A04F1F2C508D007ED3EE /* ChartsMainView.m */; };
 		F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0571F2C5151007ED3EE /* ChartsTopView.m */; };
+		F679C9001F2C5A9900FEF4A2 /* ChartsBottomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C8FF1F2C5A9900FEF4A2 /* ChartsBottomScrollView.m */; };
+		F679C9051F2C60BE00FEF4A2 /* LinechartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C9041F2C60BE00FEF4A2 /* LinechartView.m */; };
+		F679C9081F2C6A3200FEF4A2 /* VolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C9071F2C6A3200FEF4A2 /* VolumeView.m */; };
+		F679C90D1F2C83F900FEF4A2 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C90C1F2C83F900FEF4A2 /* Const.m */; };
+		F679C9131F2CB61700FEF4A2 /* stockMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = F679C9121F2CB61700FEF4A2 /* stockMsg.plist */; };
+		F679C9161F2CBDC500FEF4A2 /* ChartsContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C9151F2CBDC500FEF4A2 /* ChartsContentView.m */; };
+		F679C91F1F2CDBD400FEF4A2 /* TimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C91E1F2CDBD400FEF4A2 /* TimeLineModel.m */; };
+		F679C9221F2CDC5700FEF4A2 /* TimeLineTotalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C9211F2CDC5700FEF4A2 /* TimeLineTotalModel.m */; };
 		F6C2418A1F25FF1500523628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C241891F25FF1500523628 /* main.m */; };
 		F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2418C1F25FF1500523628 /* AppDelegate.m */; };
 		F6C241901F25FF1500523628 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2418F1F25FF1500523628 /* HomeViewController.m */; };
@@ -58,6 +66,22 @@
 		F656A04F1F2C508D007ED3EE /* ChartsMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsMainView.m; sourceTree = "<group>"; };
 		F656A0561F2C5151007ED3EE /* ChartsTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsTopView.h; sourceTree = "<group>"; };
 		F656A0571F2C5151007ED3EE /* ChartsTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsTopView.m; sourceTree = "<group>"; };
+		F679C8FE1F2C5A9900FEF4A2 /* ChartsBottomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsBottomScrollView.h; sourceTree = "<group>"; };
+		F679C8FF1F2C5A9900FEF4A2 /* ChartsBottomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsBottomScrollView.m; sourceTree = "<group>"; };
+		F679C9031F2C60BE00FEF4A2 /* LinechartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinechartView.h; sourceTree = "<group>"; };
+		F679C9041F2C60BE00FEF4A2 /* LinechartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinechartView.m; sourceTree = "<group>"; };
+		F679C9061F2C6A3200FEF4A2 /* VolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeView.h; sourceTree = "<group>"; };
+		F679C9071F2C6A3200FEF4A2 /* VolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeView.m; sourceTree = "<group>"; };
+		F679C90A1F2C83AB00FEF4A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F679C90B1F2C83F900FEF4A2 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		F679C90C1F2C83F900FEF4A2 /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		F679C9121F2CB61700FEF4A2 /* stockMsg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stockMsg.plist; sourceTree = "<group>"; };
+		F679C9141F2CBDC500FEF4A2 /* ChartsContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsContentView.h; sourceTree = "<group>"; };
+		F679C9151F2CBDC500FEF4A2 /* ChartsContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsContentView.m; sourceTree = "<group>"; };
+		F679C91D1F2CDBD400FEF4A2 /* TimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineModel.h; sourceTree = "<group>"; };
+		F679C91E1F2CDBD400FEF4A2 /* TimeLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineModel.m; sourceTree = "<group>"; };
+		F679C9201F2CDC5700FEF4A2 /* TimeLineTotalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineTotalModel.h; sourceTree = "<group>"; };
+		F679C9211F2CDC5700FEF4A2 /* TimeLineTotalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineTotalModel.m; sourceTree = "<group>"; };
 		F6C241851F25FF1500523628 /* KLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C241891F25FF1500523628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6C2418B1F25FF1500523628 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +147,7 @@
 		F656A03B1F2C33AF007ED3EE /* 工商银行数据 */ = {
 			isa = PBXGroup;
 			children = (
+				F679C9121F2CB61700FEF4A2 /* stockMsg.plist */,
 				F656A03C1F2C33AF007ED3EE /* dayKLine.plist */,
 				F656A03D1F2C33AF007ED3EE /* monthKLine.plist */,
 				F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */,
@@ -135,8 +160,10 @@
 		F656A04B1F2C508D007ED3EE /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				F679C9171F2CDB8300FEF4A2 /* Model */,
+				F679C9091F2C839300FEF4A2 /* Const&Pch */,
+				F679C8FC1F2C57FB00FEF4A2 /* BottomView */,
 				F656A04D1F2C508D007ED3EE /* MainView */,
-				F656A0551F2C50AC007ED3EE /* ButtomView */,
 				F656A0501F2C508D007ED3EE /* TopView */,
 			);
 			path = Charts;
@@ -154,8 +181,8 @@
 		F656A0501F2C508D007ED3EE /* TopView */ = {
 			isa = PBXGroup;
 			children = (
-				F656A0591F2C5160007ED3EE /* SelectView */,
 				F656A0511F2C508D007ED3EE /* MainView */,
+				F656A0591F2C5160007ED3EE /* SelectView */,
 				F656A0531F2C508D007ED3EE /* StockMsgView */,
 			);
 			path = TopView;
@@ -177,18 +204,79 @@
 			path = StockMsgView;
 			sourceTree = "<group>";
 		};
-		F656A0551F2C50AC007ED3EE /* ButtomView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ButtomView;
-			sourceTree = "<group>";
-		};
 		F656A0591F2C5160007ED3EE /* SelectView */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SelectView;
+			sourceTree = "<group>";
+		};
+		F679C8FC1F2C57FB00FEF4A2 /* BottomView */ = {
+			isa = PBXGroup;
+			children = (
+				F679C9011F2C608400FEF4A2 /* LinechartView */,
+				F679C9021F2C608400FEF4A2 /* VolumeView */,
+				F679C8FD1F2C5A6E00FEF4A2 /* MainView */,
+			);
+			path = BottomView;
+			sourceTree = "<group>";
+		};
+		F679C8FD1F2C5A6E00FEF4A2 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				F679C8FE1F2C5A9900FEF4A2 /* ChartsBottomScrollView.h */,
+				F679C8FF1F2C5A9900FEF4A2 /* ChartsBottomScrollView.m */,
+				F679C9141F2CBDC500FEF4A2 /* ChartsContentView.h */,
+				F679C9151F2CBDC500FEF4A2 /* ChartsContentView.m */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		F679C9011F2C608400FEF4A2 /* LinechartView */ = {
+			isa = PBXGroup;
+			children = (
+				F679C9031F2C60BE00FEF4A2 /* LinechartView.h */,
+				F679C9041F2C60BE00FEF4A2 /* LinechartView.m */,
+			);
+			path = LinechartView;
+			sourceTree = "<group>";
+		};
+		F679C9021F2C608400FEF4A2 /* VolumeView */ = {
+			isa = PBXGroup;
+			children = (
+				F679C9061F2C6A3200FEF4A2 /* VolumeView.h */,
+				F679C9071F2C6A3200FEF4A2 /* VolumeView.m */,
+			);
+			path = VolumeView;
+			sourceTree = "<group>";
+		};
+		F679C9091F2C839300FEF4A2 /* Const&Pch */ = {
+			isa = PBXGroup;
+			children = (
+				F679C90A1F2C83AB00FEF4A2 /* PrefixHeader.pch */,
+				F679C90B1F2C83F900FEF4A2 /* Const.h */,
+				F679C90C1F2C83F900FEF4A2 /* Const.m */,
+			);
+			path = "Const&Pch";
+			sourceTree = "<group>";
+		};
+		F679C9171F2CDB8300FEF4A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F679C91C1F2CDBD400FEF4A2 /* TimeLine */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F679C91C1F2CDBD400FEF4A2 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				F679C9201F2CDC5700FEF4A2 /* TimeLineTotalModel.h */,
+				F679C9211F2CDC5700FEF4A2 /* TimeLineTotalModel.m */,
+				F679C91D1F2CDBD400FEF4A2 /* TimeLineModel.h */,
+				F679C91E1F2CDBD400FEF4A2 /* TimeLineModel.m */,
+			);
+			path = TimeLine;
 			sourceTree = "<group>";
 		};
 		F6C2417C1F25FF1500523628 = {
@@ -380,6 +468,7 @@
 				F6C241981F25FF1500523628 /* LaunchScreen.storyboard in Resources */,
 				F656A0411F2C33AF007ED3EE /* dayKLine.plist in Resources */,
 				F6C241951F25FF1500523628 /* Assets.xcassets in Resources */,
+				F679C9131F2CB61700FEF4A2 /* stockMsg.plist in Resources */,
 				F656A0421F2C33AF007ED3EE /* monthKLine.plist in Resources */,
 				F656A0431F2C33AF007ED3EE /* severalDaysTimeLine.plist in Resources */,
 				F656A0451F2C33AF007ED3EE /* weekKLine.plist in Resources */,
@@ -456,13 +545,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F679C91F1F2CDBD400FEF4A2 /* TimeLineModel.m in Sources */,
+				F679C9051F2C60BE00FEF4A2 /* LinechartView.m in Sources */,
 				F6C241901F25FF1500523628 /* HomeViewController.m in Sources */,
+				F679C9221F2CDC5700FEF4A2 /* TimeLineTotalModel.m in Sources */,
 				F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */,
 				F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */,
 				F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */,
+				F679C9161F2CBDC500FEF4A2 /* ChartsContentView.m in Sources */,
+				F679C90D1F2C83F900FEF4A2 /* Const.m in Sources */,
 				F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */,
+				F679C9081F2C6A3200FEF4A2 /* VolumeView.m in Sources */,
 				F6C2418A1F25FF1500523628 /* main.m in Sources */,
 				F6EBB81C1F27496E00ED3B15 /* HttpsManager.m in Sources */,
+				F679C9001F2C5A9900FEF4A2 /* ChartsBottomScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +700,9 @@
 			baseConfigurationReference = BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLine/Charts/Const&Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = KLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -617,6 +716,9 @@
 			baseConfigurationReference = 20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLine/Charts/Const&Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = KLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

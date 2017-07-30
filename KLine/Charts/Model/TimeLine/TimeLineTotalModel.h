@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+//model
+#import "TimeLineModel.h"
+
+//分时图总模型
 @interface TimeLineTotalModel : NSObject
+
+/** 昨收 */
+@property (nonatomic, assign) CGFloat preClosePrice;
+
+/** 数据数组 */
+@property (nonatomic, strong) NSArray<TimeLineModel *> *dataArr;
+
+
++ (instancetype)modelWithDict:(NSDictionary *)dict;
 
 @end

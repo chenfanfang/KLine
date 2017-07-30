@@ -10,21 +10,7 @@
 #define PrefixHeader_pch
 
 
-//=================================================================
-//                           枚举
-//=================================================================
-#pragma mark - 枚举
 
-typedef NS_ENUM(NSInteger, ChartsType) {
-    //分时图
-    ChartsType_TimeLine = 0,
-    //日K
-    ChartsType_DayKLine,
-    //周K
-    ChartsType_WeekKLine,
-    //月K
-    ChartsType_MonthKLine
-};
 
 
 //=================================================================
@@ -38,8 +24,16 @@ typedef NS_ENUM(NSInteger, ChartsType) {
 //距离屏幕的距离
 #define Margin 10
 
-//LinechartView在scrollView中的高度比例
-#define LinechartHeightRate 0.7
+//在contentView中heigh = height - MAHeight - DateHeight 之后 折线图 高度比例
+#define LinechartHeightRate 0.6
+
+//显示MA数据的高度
+#define MAHeight 30
+
+//显示日期、时间的高度
+#define DateHeight 30
+
+#define MAVOLHeight 30
 
 //=================================================================
 //                           颜色
@@ -51,14 +45,31 @@ typedef NS_ENUM(NSInteger, ChartsType) {
 
 #define FFColor(r, g, b) FFRGBColor(r, g, b, 1)
 
+//背景色
 #define BackgroundColor FFColor(33,45,65)
+
+//背景图 线的颜色
+#define BackgroundLineColor FFColor(20,20,20)
+
+//分时图的折线颜色
+#define TimeLineCharColor FFColor(88, 149, 236)
+
+//分时图的折线fill的颜色
+#define TimeLineCharFillColor FFRGBColor(88, 149, 236, 0.3)
+
+//分时图均价线的颜色
+#define TimeLineAveragePriceColor FFColor(253, 154, 57)
 
 //=================================================================
 //                           import
 //=================================================================
 #pragma mark - import
 
+//third
 #import <Masonry.h>
+
+//const
+#import "Const.h"
 
 
 #endif /* PrefixHeader_pch */

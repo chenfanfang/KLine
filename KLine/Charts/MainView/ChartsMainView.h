@@ -9,26 +9,29 @@
 #import <UIKit/UIKit.h>
 @class ChartsMainView;
 
-typedef NS_ENUM(NSInteger, ChartsType) {
-    //分时图
-    ChartsType_TimeLine = 0,
-    //日K
-    ChartsType_DayKLine,
-    //周K
-    ChartsType_WeekKLine,
-    //月K
-    ChartsType_MonthKLine
-};
+
 
 @protocol KLineMainViewDataSource <NSObject>
 
+@required
+
+//股票相关的信息(股票代码、股票名称、今开、昨开....)
+- (id)stockMessageInKLineMainView:(ChartsMainView *)klineMainView;
+
+//k线图的类型(分时图、日k、周k....)
 - (ChartsType)chartsTypeInKLineMainView:(ChartsMainView *)klineMainView;
 
-- (NSArray *)dataArrayInKLineMainView:(ChartsMainView *)klineMainView;
+//股票实时数据(价格、成交量..用于绘制折线图、成交量图)
+- (id)dataInKLineMainView:(ChartsMainView *)klineMainView;
+
+
 
 @end
 
 @interface ChartsMainView : UIView
+
+/** 数据源 */
+@property (nonatomic, weak) id<KLineMainViewDataSource> dataSource;
 
 - (void)reloadData;
 

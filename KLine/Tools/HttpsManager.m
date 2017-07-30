@@ -17,6 +17,10 @@
         filePath = [[NSBundle mainBundle] pathForResource:@"timeLine.plist" ofType:nil];
     }
     
+    else if (dataType == DataType_StockMessage) {
+        filePath = [[NSBundle mainBundle] pathForResource:@"stockMsg.plist" ofType:nil];
+    }
+    
     else if (dataType == DataType_DayKLine) {
         filePath = [[NSBundle mainBundle] pathForResource:@"dayKLine.plist" ofType:nil];
     }
@@ -24,11 +28,9 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSDictionary *dataDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (successBlock) {
-                successBlock(dataDict);
-            }
-        });
+        if (successBlock) {
+            successBlock(dataDict);
+        }
     });
 }
 

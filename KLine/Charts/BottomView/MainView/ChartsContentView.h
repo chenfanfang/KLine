@@ -10,4 +10,6 @@
 
 @interface ChartsContentView : UIView
 
+- (void)reDrawWithLineData:(id)lineData chartsType:(ChartsType)chartsType;
+
 @end

@@ -10,4 +10,7 @@
 
 @interface LinechartView : UIView
 
+/** 数据 */
+@property (nonatomic, strong) NSDictionary *data;
+
 @end

@@ -10,4 +10,18 @@
 
 @implementation TimeLineModel
 
++ (instancetype)modelWithDataArr:(NSArray *)dataArr {
+    TimeLineModel *model = [TimeLineModel new];
+    NSMutableString *timeStrM = [NSMutableString stringWithFormat:@"%@",dataArr[0]];
+    [timeStrM insertString:@":" atIndex:2];
+    
+    model.time = timeStrM.copy;
+    model.price = [dataArr[1] floatValue];
+    model.amount = [dataArr[2] integerValue];
+    model.totalMoney = [dataArr[3] integerValue];
+    model.averagePrice = model.totalMoney * 1.0 / model.amount;
+    
+    return model;
+}
+
 @end
