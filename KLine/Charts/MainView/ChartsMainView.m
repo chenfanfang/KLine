@@ -39,7 +39,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = BackgroundColor;
+        self.backgroundColor = KLine_Color_BackgroundColor;
         
         [self topView];
         
@@ -65,7 +65,7 @@
         _topView = topView;
         [topView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.mas_equalTo(self);
-            make.height.mas_equalTo(TopViewHeight);
+            make.height.mas_equalTo(KLine_Const_TopViewHeight);
         }];
     }
     
@@ -80,11 +80,11 @@
 //        _bottomView.contentSize = CGSizeMake(1000, 1000);
         [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.topView.mas_bottom);
-            make.left.mas_equalTo(self).offset(Margin);
-            make.right.mas_equalTo(self).offset(-Margin);
-            make.bottom.mas_equalTo(self).offset(-Margin);
+            make.left.mas_equalTo(self).offset(KLine_Const_Margin);
+            make.right.mas_equalTo(self).offset(-KLine_Const_Margin);
+            make.bottom.mas_equalTo(self).offset(-KLine_Const_Margin);
         }];
-        _bottomView.backgroundColor = BackgroundColor;
+        _bottomView.backgroundColor = KLine_Color_BackgroundColor;
         
         
     }
@@ -105,7 +105,7 @@
     data = [self.dataSource dataInKLineMainView:self];
     stockMessage = [self.dataSource stockMessageInKLineMainView:self];
     
-    [self.topView ]
+//    [self.topView ]
     [self.bottomView reDrawWithData:data sectionCount:10 charsType:type];
 }
 

@@ -39,7 +39,7 @@
     //==================
     //   绘制股票基本信息
     //==================
-    CGFloat height = rect.size.height - SelecteTypeHeight;
+    CGFloat height = rect.size.height - KLine_Const_SelecteTypeHeight;
     CGRect stockRect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);
     [self drawStockMessageWithRect:stockRect ctx:ctx];
     
@@ -52,8 +52,8 @@
 - (void)drawStockMessageWithRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
     NSDictionary *attributes_White_BigFont = @{
-                                               NSForegroundColorAttributeName : WhiteColor,
-                                               NSFontAttributeName : [UIFont systemFontOfSize:StockMsgBigFontSize]
+                                               NSForegroundColorAttributeName : KLine_Color_WhiteColor,
+                                               NSFontAttributeName : [UIFont systemFontOfSize:KLine_Const_StockMsgBigFontSize]
                                                };
     
     //分成两部分

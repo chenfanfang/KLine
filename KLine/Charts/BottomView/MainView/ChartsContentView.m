@@ -81,28 +81,28 @@
     CGFloat x = 0;
     CGFloat height = 0;
     //绘制MA
-    height = MAHeight;
+    height = KLine_Const_MAHeight;
 //    [self drawBackgroundInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
     //=================
     //     绘制背景
     //=================
-    height = rect.size.height - MAHeight;
-    y = MAHeight;
+    height = rect.size.height - KLine_Const_MAHeight;
+    y = KLine_Const_MAHeight;
     [self drawBackgroundInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
     
     //=================
     //    绘制折线图
     //=================
-    height = (rect.size.height - MAHeight - DateHeight - MAVOLHeight) * LinechartHeightRate;
+    height = (rect.size.height - KLine_Const_MAHeight - KLine_Const_DateHeight - KLine_Const_MAVOLHeight) * KLine_Const_LinechartHeightRate;
     [self drawChartsLineInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
     //=================
     //    绘制时间
     //=================
     y = y + height;
-    height = DateHeight;
+    height = KLine_Const_DateHeight;
     [self drawDateInRect:CGRectMake(x + 1, y, width - 2, height) ctx:ctx];
     
     
@@ -124,7 +124,7 @@
 #pragma mark - 绘制背景
 
 - (void)drawBackgroundInRect:(CGRect)rect ctx:(CGContextRef)ctx {
-    CGContextSetStrokeColorWithColor(ctx, BackgroundLineColor.CGColor);
+    CGContextSetStrokeColorWithColor(ctx, KLine_Color_BackgroundLineColor.CGColor);
     //绘制矩形
     CGContextAddRect(ctx, rect);
     
@@ -195,7 +195,7 @@
     //=================
     //     绘制折现图
     //=================
-    CGContextSetStrokeColorWithColor(ctx, TimeLineCharColor.CGColor);
+    CGContextSetStrokeColorWithColor(ctx, KLine_Color_TimeLineCharColor.CGColor);
     CGFloat lineX = 0;
     CGFloat lineY;
     CGFloat price = 0;
@@ -215,7 +215,7 @@
     CGContextStrokePath(ctx);
     
     //填充色的处理
-    CGContextSetFillColorWithColor(ctx, TimeLineCharFillColor.CGColor);
+    CGContextSetFillColorWithColor(ctx, KLine_Color_TimeLineCharFillColor.CGColor);
     CGContextMoveToPoint(ctx, 0, maxY);
     for (int i = 0; i < modelArr.count; i++) {
         TimeLineModel *model = modelArr[i];
@@ -233,7 +233,7 @@
     
     
     //均线的处理
-    CGContextSetStrokeColorWithColor(ctx, TimeLineAveragePriceColor.CGColor);
+    CGContextSetStrokeColorWithColor(ctx, KLine_Color_TimeLineAveragePriceColor.CGColor);
     for (int i = 0; i < modelArr.count; i++) {
         TimeLineModel *model = modelArr[i];
         lineX = i * averageTimeWidth;
@@ -258,7 +258,7 @@
 #pragma mark - 绘制日期、时间
 - (void)drawDateInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
-    CGContextSetFillColorWithColor(ctx, BackgroundColor.CGColor);
+    CGContextSetFillColorWithColor(ctx, KLine_Color_BackgroundColor.CGColor);
     CGContextAddRect(ctx, rect);
     CGContextFillPath(ctx);
     
@@ -295,7 +295,7 @@
 #pragma mark - 绘制成交量
 - (void)drawVolumeInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
-    CGContextSetStrokeColorWithColor(ctx, BackgroundLineColor.CGColor);
+    CGContextSetStrokeColorWithColor(ctx, KLine_Color_BackgroundLineColor.CGColor);
     
     //绘制3条横线（3个区块）
     NSInteger lineCount = 3;
@@ -334,7 +334,7 @@
     
     CGFloat volumeX = 0;
     CGFloat volumeY = 0;
-    CGFloat volumeWidth = (width - (sectionCount - 1) * VolumeMargin) / sectionCount;
+    CGFloat volumeWidth = (width - (sectionCount - 1) * KLine_Const_VolumeMargin) / sectionCount;
     CGFloat volumeHeight = 0;
     //昨收价
     CGFloat prePrice = self.timeLineTotalModel.preClosePrice;
@@ -344,16 +344,16 @@
         //跌
         if (model.price < prePrice) {
             
-            CGContextSetFillColorWithColor(ctx, StockFallColor.CGColor);
+            CGContextSetFillColorWithColor(ctx, KLine_Color_StockFallColor.CGColor);
         } else {
-            CGContextSetFillColorWithColor(ctx, StockRiseColor.CGColor);
+            CGContextSetFillColorWithColor(ctx, KLine_Color_StockRiseColor.CGColor);
         }
         
         prePrice = model.price;
         
         volumeHeight = (model.amount - minVolume) / averagePxValume;
         volumeY = (rectHeight - volumeHeight) + minY;
-        volumeX = (VolumeMargin + volumeWidth) * i;
+        volumeX = (KLine_Const_VolumeMargin + volumeWidth) * i;
         CGRect volumeRect = CGRectMake(volumeX, volumeY, volumeWidth, volumeHeight);
         CGContextAddRect(ctx, volumeRect);
         CGContextFillPath(ctx);
