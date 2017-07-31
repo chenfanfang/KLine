@@ -18,7 +18,7 @@
 
 
 
-@property (nonatomic, assign) ChartsType chartsType;
+@property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
 
 /** 区间个数 */
 @property (nonatomic, assign) NSUInteger sectionCount;
@@ -29,6 +29,7 @@
 @end
 
 @implementation ChartsContentView
+
 
 //=================================================================
 //                           懒加载
@@ -59,7 +60,7 @@
 //=================================================================
 #pragma mark - 绘图
 
-- (void)reDrawWithLineData:(id)lineData chartsType:(ChartsType)chartsType {
+- (void)reDrawWithLineData:(id)lineData chartsType:(KLine_Enum_ChartsType)chartsType {
     self.timeLineTotalModel = lineData;
     self.chartsType = chartsType;
     [self setNeedsDisplay];
@@ -359,8 +360,24 @@
         CGContextFillPath(ctx);
     }
     
-    
+}
 
+
+//=================================================================
+//                           手势的处理
+//=================================================================
+#pragma mark - 手势的处理
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@",touches);
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", touches);
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"end");
 }
 
 

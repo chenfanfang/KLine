@@ -10,6 +10,6 @@
 
 @interface ChartsContentView : UIView
 
-- (void)reDrawWithLineData:(id)lineData chartsType:(ChartsType)chartsType;
+- (void)reDrawWithLineData:(id)lineData chartsType:(KLine_Enum_ChartsType)chartsType;
 
 @end

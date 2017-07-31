@@ -46,6 +46,9 @@
     [HttpsManager requestWithDataType:DataType_StockMessage success:^(id responseObj) {
         
         self.stockMessageData = responseObj;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.chartsMainView reloadData];
+        });
     } error:nil];
     
     //获取分时图数据
@@ -97,8 +100,8 @@
     return self.stockMessageData;
 }
 
-- (ChartsType)chartsTypeInKLineMainView:(ChartsMainView *)klineMainView {
-    return ChartsType_TimeLine;
+- (KLine_Enum_ChartsType)chartsTypeInKLineMainView:(ChartsMainView *)klineMainView {
+    return KLine_Enum_ChartsType_TimeLine;
 }
 
 - (id)dataInKLineMainView:(ChartsMainView *)klineMainView {

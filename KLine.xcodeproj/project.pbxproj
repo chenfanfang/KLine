@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3325E1EE0AAC56A6214D493B /* libPods-KLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53B1421AF9724D52AED88F6 /* libPods-KLine.a */; };
+		F62746E11F2F7732008CE891 /* ChartsTopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */; };
 		F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */; };
 		F656A0411F2C33AF007ED3EE /* dayKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03C1F2C33AF007ED3EE /* dayKLine.plist */; };
 		F656A0421F2C33AF007ED3EE /* monthKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03D1F2C33AF007ED3EE /* monthKLine.plist */; };
@@ -55,6 +56,8 @@
 		20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KLine/Pods-KLine.release.xcconfig"; sourceTree = "<group>"; };
 		BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KLine/Pods-KLine.debug.xcconfig"; sourceTree = "<group>"; };
 		E53B1421AF9724D52AED88F6 /* libPods-KLine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KLine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62746DF1F2F7732008CE891 /* ChartsTopSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsTopSelectView.h; sourceTree = "<group>"; };
+		F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsTopSelectView.m; sourceTree = "<group>"; };
 		F656A0331F2C2EC8007ED3EE /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
 		F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		F656A03C1F2C33AF007ED3EE /* dayKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dayKLine.plist; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 			children = (
 				F656A0561F2C5151007ED3EE /* ChartsTopView.h */,
 				F656A0571F2C5151007ED3EE /* ChartsTopView.m */,
+				F62746DF1F2F7732008CE891 /* ChartsTopSelectView.h */,
+				F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 				F679C91F1F2CDBD400FEF4A2 /* TimeLineModel.m in Sources */,
 				F679C9051F2C60BE00FEF4A2 /* LinechartView.m in Sources */,
 				F6C241901F25FF1500523628 /* HomeViewController.m in Sources */,
+				F62746E11F2F7732008CE891 /* ChartsTopSelectView.m in Sources */,
 				F679C9221F2CDC5700FEF4A2 /* TimeLineTotalModel.m in Sources */,
 				F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */,
 				F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */,

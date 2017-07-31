@@ -13,13 +13,25 @@
 //=================================================================
 #pragma mark - 枚举
 
-typedef NS_ENUM(NSInteger, ChartsType) {
+//图表类型
+typedef NS_ENUM(NSInteger, KLine_Enum_ChartsType) {
     //分时图
-    ChartsType_TimeLine = 0,
+    KLine_Enum_ChartsType_TimeLine = 0,
     //日K
-    ChartsType_DayKLine,
+    KLine_Enum_ChartsType_DayKLine,
     //周K
-    ChartsType_WeekKLine,
+    KLine_Enum_ChartsType_WeekKLine,
     //月K
-    ChartsType_MonthKLine
+    KLine_Enum_ChartsType_MonthKLine
+};
+
+
+//股票的涨跌状态
+typedef NS_ENUM(NSInteger, KLine_Enum_StockHighsAndLows) {
+    //跌
+    KLine_Enum_StockHighsAndLows_Lows = 0,
+    //涨
+    KLine_Enum_StockHighsAndLows_Hights,
+    //平
+    KLine_Enum_StockHighsAndLows_Flat,
 };

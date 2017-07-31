@@ -22,7 +22,7 @@
 #define KLine_Const_TopViewHeight 100
 
 //选择k线图类型的高度
-#define KLine_Const_SelecteTypeHeight 30
+#define KLine_Const_SelecteTypeHeight 40
 
 //距离屏幕的距离
 #define KLine_Const_Margin 10
@@ -43,10 +43,10 @@
 #define KLine_Const_VolumeMargin 1
 
 //股票信息大号字体
-#define KLine_Const_StockMsgBigFontSize 15
+#define KLine_Const_StockMsgBigFontSize 20
 
 //股票信息小号字体
-#define KLine_Const_StockMsgSmallFontSize 10
+#define KLine_Const_StockMsgSmallFontSize 12
 
 //=================================================================
 //                           颜色

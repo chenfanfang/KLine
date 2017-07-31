@@ -24,7 +24,7 @@
 @property (nonatomic, weak) ChartsBottomScrollView *bottomView;
 
 /** 图标类型(分时、日K、周K....) */
-@property (nonatomic, assign) ChartsType chartsType;
+@property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
 
 @end
 
@@ -59,13 +59,15 @@
 - (ChartsTopView *)topView {
     if (_topView == nil) {
         ChartsTopView *topView = [ChartsTopView new];
-        topView.backgroundColor = [UIColor yellowColor];
-        
+        topView.backgroundColor = KLine_Color_BackgroundColor;
         [self addSubview:topView];
         _topView = topView;
         [topView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.mas_equalTo(self);
             make.height.mas_equalTo(KLine_Const_TopViewHeight);
+            
+            make.left.mas_equalTo(self).offset(KLine_Const_Margin);
+            make.right.mas_equalTo(self).offset(-KLine_Const_Margin);
+            make.top.mas_equalTo(self).offset(KLine_Const_Margin);
         }];
     }
     
@@ -97,7 +99,7 @@
 //=================================================================
 #pragma mark - 刷新数据
 - (void)reloadData {
-    ChartsType type;
+    KLine_Enum_ChartsType type;
     id data;
     id stockMessage;
     
@@ -105,7 +107,7 @@
     data = [self.dataSource dataInKLineMainView:self];
     stockMessage = [self.dataSource stockMessageInKLineMainView:self];
     
-//    [self.topView ]
+    [self.topView reDrawWithStockMessage:stockMessage];
     [self.bottomView reDrawWithData:data sectionCount:10 charsType:type];
 }
 

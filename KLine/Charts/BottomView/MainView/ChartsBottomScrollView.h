@@ -22,6 +22,6 @@
 ///** 数据源 */
 //@property (nonatomic, weak) id<ChartsBottomScrollViewDataSource> dataSource;
 
-- (void)reDrawWithData:(id)data sectionCount:(NSUInteger)sectionCount charsType:(ChartsType)chartsType;
+- (void)reDrawWithData:(id)data sectionCount:(NSUInteger)sectionCount charsType:(KLine_Enum_ChartsType)chartsType;
 
 @end

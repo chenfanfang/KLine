@@ -10,6 +10,6 @@
 
 @interface ChartsTopView : UIView
 
-- (void)redrawWithStockMessage:(id)stockMessage;
+- (void)reDrawWithStockMessage:(id)stockMessage;
 
 @end

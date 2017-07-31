@@ -38,7 +38,7 @@
 @property (nonatomic, strong) TimeLineTotalModel *timeLineTotalModel;
 
 /** 图标类型 */
-@property (nonatomic, assign) ChartsType chartsType;
+@property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
 
 @end
 
@@ -73,7 +73,7 @@
 //}
 
 
-- (void)reDrawWithData:(id)data sectionCount:(NSUInteger)sectionCount charsType:(ChartsType)chartsType{
+- (void)reDrawWithData:(id)data sectionCount:(NSUInteger)sectionCount charsType:(KLine_Enum_ChartsType)chartsType{
     
     self.timeLineTotalModel = data;
     self.sectionCount = sectionCount;
@@ -102,9 +102,12 @@
     [super layoutSubviews];
     
     self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    
+    
 //    self.linechartView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height * LinechartHeightRate);
 //    
 //    self.volumeView.frame = CGRectMake(0, self.frame.size.height * LinechartHeightRate, self.frame.size.width, self.frame.size.height * (1 - LinechartHeightRate));
+    
 }
 
 //=================================================================
@@ -118,6 +121,12 @@
         [self addSubview:contentView];
         _contentView = contentView;
         _contentView.backgroundColor = [UIColor clearColor];
+//        [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(self);
+//            make.left.mas_equalTo(self).offset(KLine_Const_Margin);
+//            make.bottom.mas_equalTo(self).offset(-KLine_Const_Margin);
+//            make.right.mas_equalTo(self).offset(-KLine_Const_Margin);
+//        }];
     }
     
     return _contentView;

@@ -19,7 +19,7 @@
 - (id)stockMessageInKLineMainView:(ChartsMainView *)klineMainView;
 
 //k线图的类型(分时图、日k、周k....)
-- (ChartsType)chartsTypeInKLineMainView:(ChartsMainView *)klineMainView;
+- (KLine_Enum_ChartsType)chartsTypeInKLineMainView:(ChartsMainView *)klineMainView;
 
 //股票实时数据(价格、成交量..用于绘制折线图、成交量图)
 - (id)dataInKLineMainView:(ChartsMainView *)klineMainView;
