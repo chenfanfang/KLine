@@ -19,7 +19,6 @@
     model.price = [dataArr[1] floatValue];
     model.amount = [dataArr[2] integerValue];
     model.totalMoney = [dataArr[3] integerValue];
-    model.averagePrice = model.totalMoney * 1.0 / model.amount;
     
     return model;
 }

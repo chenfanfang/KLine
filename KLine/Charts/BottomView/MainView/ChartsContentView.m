@@ -106,7 +106,17 @@
     [self drawDateInRect:CGRectMake(x + 1, y, width - 2, height) ctx:ctx];
     
     
+    //绘制成交量
+    y = y + height;
+    height = rect.size.height - y;
+    [self drawVolumeInRect:CGRectMake(x, y, width, height) ctx:ctx];
+    
+    
+    
+    
 }
+
+
 
 //=================================================================
 //                           绘制背景
@@ -285,6 +295,72 @@
 #pragma mark - 绘制成交量
 - (void)drawVolumeInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
+    CGContextSetStrokeColorWithColor(ctx, BackgroundLineColor.CGColor);
+    
+    //绘制3条横线（3个区块）
+    NSInteger lineCount = 3;
+    CGFloat rectHeight = rect.size.height;
+    CGFloat averageHeight = rectHeight / lineCount;
+    CGFloat width = rect.size.width;
+    CGFloat minY = rect.origin.y;
+    CGFloat y = 0;
+    CGFloat startX = 0;
+    CGFloat endX = width;
+    for (int i = 0; i < lineCount; i++) {
+        y = i * averageHeight + minY;
+        CGContextMoveToPoint(ctx, startX, y);
+        CGContextAddLineToPoint(ctx, endX, y);
+        CGContextStrokePath(ctx);
+    }
+    
+    
+    
+    
+    
+    //获取交易量的  最大值，最小值，计算差值
+    NSArray <TimeLineModel *>*modelArr = self.timeLineTotalModel.dataArr;
+    NSArray *priceArr = [modelArr valueForKeyPath:@"amount"];
+    NSInteger maxVolume = [[priceArr valueForKeyPath:@"@max.integerValue"] integerValue];
+    NSInteger minVolume = [[priceArr valueForKeyPath:@"@min.integerValue"] integerValue];
+    
+    //差值
+    NSInteger deltaVolume = maxVolume - minVolume;
+    
+    //每像素代表多少成交量
+    CGFloat averagePxValume = deltaVolume / rectHeight;
+    
+    //区间个数
+    NSInteger sectionCount = 330;
+    
+    CGFloat volumeX = 0;
+    CGFloat volumeY = 0;
+    CGFloat volumeWidth = (width - (sectionCount - 1) * VolumeMargin) / sectionCount;
+    CGFloat volumeHeight = 0;
+    //昨收价
+    CGFloat prePrice = self.timeLineTotalModel.preClosePrice;
+    
+    for (int i = 0; i < sectionCount; i++) {
+        TimeLineModel *model = modelArr[i];
+        //跌
+        if (model.price < prePrice) {
+            
+            CGContextSetFillColorWithColor(ctx, StockFallColor.CGColor);
+        } else {
+            CGContextSetFillColorWithColor(ctx, StockRiseColor.CGColor);
+        }
+        
+        prePrice = model.price;
+        
+        volumeHeight = (model.amount - minVolume) / averagePxValume;
+        volumeY = (rectHeight - volumeHeight) + minY;
+        volumeX = (VolumeMargin + volumeWidth) * i;
+        CGRect volumeRect = CGRectMake(volumeX, volumeY, volumeWidth, volumeHeight);
+        CGContextAddRect(ctx, volumeRect);
+        CGContextFillPath(ctx);
+    }
+    
+    
+
 }
 
 

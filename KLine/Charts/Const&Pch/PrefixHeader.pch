@@ -21,11 +21,14 @@
 //股票信息+选择k线图类型 的那个view的高度
 #define TopViewHeight 100
 
+//选择k线图类型的高度
+#define SelecteTypeHeight 30
+
 //距离屏幕的距离
 #define Margin 10
 
 //在contentView中heigh = height - MAHeight - DateHeight 之后 折线图 高度比例
-#define LinechartHeightRate 0.6
+#define LinechartHeightRate 0.7
 
 //显示MA数据的高度
 #define MAHeight 30
@@ -33,7 +36,17 @@
 //显示日期、时间的高度
 #define DateHeight 30
 
+//MAVOL的高度
 #define MAVOLHeight 30
+
+//volume的间距
+#define VolumeMargin 1
+
+//股票信息大号字体
+#define StockMsgBigFontSize 15
+
+//股票信息小号字体
+#define StockMsgSmallFontSize 10
 
 //=================================================================
 //                           颜色
@@ -59,6 +72,18 @@
 
 //分时图均价线的颜色
 #define TimeLineAveragePriceColor FFColor(253, 154, 57)
+
+//红色  股票涨
+#define StockRiseColor FFColor(229,63,74)
+
+//绿色  股票跌
+#define StockFallColor FFColor(24,168,65)
+
+//灰色
+#define GrayColor FFColor(190, 202, 217)
+
+//白色
+#define WhiteColor FFColor(255, 255, 255)
 
 //=================================================================
 //                           import

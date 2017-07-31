@@ -77,7 +77,7 @@
         ChartsBottomScrollView *bottomView = [[ChartsBottomScrollView alloc] init];
         [self addSubview:bottomView];
         _bottomView = bottomView;
-        _bottomView.contentSize = CGSizeMake(1000, 1000);
+//        _bottomView.contentSize = CGSizeMake(1000, 1000);
         [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.topView.mas_bottom);
             make.left.mas_equalTo(self).offset(Margin);
@@ -99,10 +99,13 @@
 - (void)reloadData {
     ChartsType type;
     id data;
+    id stockMessage;
     
     type = [self.dataSource chartsTypeInKLineMainView:self];
     data = [self.dataSource dataInKLineMainView:self];
+    stockMessage = [self.dataSource stockMessageInKLineMainView:self];
     
+    [self.topView ]
     [self.bottomView reDrawWithData:data sectionCount:10 charsType:type];
 }
 
