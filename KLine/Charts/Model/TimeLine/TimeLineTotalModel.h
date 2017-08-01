@@ -11,7 +11,7 @@
 //model
 #import "TimeLineModel.h"
 
-//分时图总模型
+//分时图数据总模型
 @interface TimeLineTotalModel : NSObject
 
 /** 昨收 */

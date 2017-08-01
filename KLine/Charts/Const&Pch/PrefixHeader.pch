@@ -57,6 +57,9 @@
 //选择k线图类型 按钮字体的大小
 #define KLine_FontSize_SelecteTypeBtnFontSize 15
 
+//详细数据的左边 价钱  右边涨跌幅的字体大小
+#define KLIne_FontSize_DetailLeftAndRightFontSize 10
+
 //=================================================================
 //                           颜色
 //=================================================================
@@ -107,6 +110,8 @@
 
 //const
 #import "Const.h"
+
+#import "KLineTool.h"
 
 
 #endif /* PrefixHeader_pch */

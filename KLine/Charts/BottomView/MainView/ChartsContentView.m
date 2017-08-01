@@ -231,10 +231,19 @@
     CGFloat minPrice = [[priceArr valueForKeyPath:@"@min.floatValue"] floatValue];
     CGFloat deltaPrice = maxPrice - minPrice;
     
+    
     //计算竖直方向每个像素所代表的价钱（为了使不会太过于充满屏幕，减去一点高度）
     CGFloat averagePxPrice = deltaPrice / (rectHeight - averageHeight);
     //计算水平方向每个分钟占的宽度
     CGFloat averageTimeWidth = rect.size.width / 330;
+    
+    
+    
+    self.detailView.maxPrice = maxPrice;
+    self.detailView.minPrice = minPrice;
+    self.detailView.preClosePrice = self.timeLineTotalModel.preClosePrice;
+    self.detailView.topMargin = averageHeight;
+    
     
     //=================
     //     绘制折现图

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+//分时图数据模型
 @interface TimeLineModel : NSObject
 
 /** 时间 */

@@ -18,6 +18,8 @@
 		F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A04F1F2C508D007ED3EE /* ChartsMainView.m */; };
 		F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0571F2C5151007ED3EE /* ChartsTopView.m */; };
 		F67845B21F302D74005D3606 /* ChartsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F67845B11F302D74005D3606 /* ChartsDetailView.m */; };
+		F67845B51F304D40005D3606 /* ChartsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F67845B41F304D40005D3606 /* ChartsDetailModel.m */; };
+		F67845B81F305BB3005D3606 /* KLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F67845B71F305BB2005D3606 /* KLineTool.m */; };
 		F679C9001F2C5A9900FEF4A2 /* ChartsBottomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C8FF1F2C5A9900FEF4A2 /* ChartsBottomScrollView.m */; };
 		F679C90D1F2C83F900FEF4A2 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = F679C90C1F2C83F900FEF4A2 /* Const.m */; };
 		F679C9131F2CB61700FEF4A2 /* stockMsg.plist in Resources */ = {isa = PBXBuildFile; fileRef = F679C9121F2CB61700FEF4A2 /* stockMsg.plist */; };
@@ -70,6 +72,10 @@
 		F656A0571F2C5151007ED3EE /* ChartsTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsTopView.m; sourceTree = "<group>"; };
 		F67845B01F302D74005D3606 /* ChartsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsDetailView.h; sourceTree = "<group>"; };
 		F67845B11F302D74005D3606 /* ChartsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsDetailView.m; sourceTree = "<group>"; };
+		F67845B31F304D40005D3606 /* ChartsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsDetailModel.h; sourceTree = "<group>"; };
+		F67845B41F304D40005D3606 /* ChartsDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsDetailModel.m; sourceTree = "<group>"; };
+		F67845B61F305BB2005D3606 /* KLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineTool.h; sourceTree = "<group>"; };
+		F67845B71F305BB2005D3606 /* KLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineTool.m; sourceTree = "<group>"; };
 		F679C8FE1F2C5A9900FEF4A2 /* ChartsBottomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsBottomScrollView.h; sourceTree = "<group>"; };
 		F679C8FF1F2C5A9900FEF4A2 /* ChartsBottomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsBottomScrollView.m; sourceTree = "<group>"; };
 		F679C90A1F2C83AB00FEF4A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -259,6 +265,8 @@
 				F679C9211F2CDC5700FEF4A2 /* TimeLineTotalModel.m */,
 				F679C91D1F2CDBD400FEF4A2 /* TimeLineModel.h */,
 				F679C91E1F2CDBD400FEF4A2 /* TimeLineModel.m */,
+				F67845B31F304D40005D3606 /* ChartsDetailModel.h */,
+				F67845B41F304D40005D3606 /* ChartsDetailModel.m */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -336,6 +344,8 @@
 			children = (
 				F6EBB81A1F27496E00ED3B15 /* HttpsManager.h */,
 				F6EBB81B1F27496E00ED3B15 /* HttpsManager.m */,
+				F67845B61F305BB2005D3606 /* KLineTool.h */,
+				F67845B71F305BB2005D3606 /* KLineTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -536,10 +546,12 @@
 				F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */,
 				F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */,
 				F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */,
+				F67845B81F305BB3005D3606 /* KLineTool.m in Sources */,
 				F679C9161F2CBDC500FEF4A2 /* ChartsContentView.m in Sources */,
 				F679C90D1F2C83F900FEF4A2 /* Const.m in Sources */,
 				F656A0581F2C5151007ED3EE /* ChartsTopView.m in Sources */,
 				F6C2418A1F25FF1500523628 /* main.m in Sources */,
+				F67845B51F304D40005D3606 /* ChartsDetailModel.m in Sources */,
 				F6EBB81C1F27496E00ED3B15 /* HttpsManager.m in Sources */,
 				F67845B21F302D74005D3606 /* ChartsDetailView.m in Sources */,
 				F679C9001F2C5A9900FEF4A2 /* ChartsBottomScrollView.m in Sources */,

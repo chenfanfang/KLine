@@ -107,7 +107,7 @@
         [self addSubview:detailView];
         _detailView = detailView;
         [detailView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.topView.mas_bottom);
+            make.top.mas_equalTo(self.topView.mas_bottom).offset(KLine_Const_MAHeight);
             make.left.mas_equalTo(self).offset(KLine_Const_Margin);
             make.right.mas_equalTo(self).offset(-KLine_Const_Margin);
             make.bottom.mas_equalTo(self).offset(-KLine_Const_Margin);
