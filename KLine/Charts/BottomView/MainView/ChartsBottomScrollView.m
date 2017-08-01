@@ -9,8 +9,6 @@
 #import "ChartsBottomScrollView.h"
 
 //view
-#import "LinechartView.h"
-#import "VolumeView.h"
 #import "ChartsContentView.h"
 
 //model

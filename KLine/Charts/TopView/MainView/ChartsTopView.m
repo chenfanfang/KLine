@@ -147,7 +147,7 @@
     //=============================
     //01398.HK 工商银行
     str = [NSString stringWithFormat:@"%@ %@",stockMsg[@"securityCode"], stockMsg[@"name"]];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgBigFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgBigFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     maxFontHeight = textSize.height;
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
@@ -157,7 +157,7 @@
     //5.480
     x += bigMargin;
     str = stockMsg[@"lastPrice"];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgBigFontSize color:stockColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgBigFontSize color:stockColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
     [str drawInRect:textRect withAttributes:attributes];
@@ -172,7 +172,7 @@
     
     //已收盘 07/31 16:09
     str = [NSString stringWithFormat:@"%@ %@",stockMsg[@"tradeStatusDescr"], stockMsg[@"tradingDay"]];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
     [str drawInRect:textRect withAttributes:attributes];
@@ -186,7 +186,7 @@
     str = stockStatus == KLine_Enum_StockHighsAndLows_Hights?
                 [NSString stringWithFormat:@"+%@ +%@%%",stockMsg[@"highAndLow"], stockMsg[@"highAndLowLimited"]] :
                 [NSString stringWithFormat:@"%@ %@%%",stockMsg[@"highAndLow"], stockMsg[@"highAndLowLimited"]];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:stockColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:stockColor alignment:NSTextAlignmentRight];
     textRect = CGRectMake(0, y, widthFlag, textSize.height);
     [str drawInRect:textRect withAttributes:attributes];
     
@@ -199,19 +199,19 @@
     //最高
     value = stockMsg[@"highPrice"];
     str = [NSString stringWithFormat:@"最高  %@",value];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     firstLineSmallFontY = (maxFontHeight - textSize.height) / 2.0;
     y = firstLineSmallFontY;
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
     
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     str = @"最高";
     [str drawInRect:textRect withAttributes:attributes];
     
     //5.500
     str = value;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:stockColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:stockColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     
@@ -222,7 +222,7 @@
     y = averageHeight;
     str = @"最低";
     textRect.origin.y = y;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     [str drawInRect:textRect withAttributes:attributes];
     
     //5.420
@@ -235,7 +235,7 @@
     } else { //绿
         tempColor = KLine_Color_StockFallColor;
     }
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:tempColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:tempColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     y = firstLineSmallFontY;
@@ -248,11 +248,11 @@
     //今开
     value = stockMsg[@"openPrice"];
     str = [NSString stringWithFormat:@"今开  %@",value];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
     
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     str = @"今开";
     [str drawInRect:textRect withAttributes:attributes];
     
@@ -267,7 +267,7 @@
         tempColor = KLine_Color_StockFallColor;
     }
     str = value;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:tempColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:tempColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     
@@ -278,13 +278,13 @@
     y = averageHeight;
     str = @"昨收";
     textRect.origin.y = y;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     [str drawInRect:textRect withAttributes:attributes];
     
     //5.420
     value = stockMsg[@"preClosePrice"];
     str = value;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     y = firstLineSmallFontY;
@@ -297,16 +297,16 @@
     //成交量
     value = stockMsg[@"volume"];
     str = [NSString stringWithFormat:@"成交量  %@",value];
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     textSize = [self sizeWithString:str attributes:attributes];
     textRect = CGRectMake(x, y, textSize.width, textSize.height);
     
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     str = @"成交量";
     [str drawInRect:textRect withAttributes:attributes];
     
     str = value;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     
@@ -317,13 +317,13 @@
     y = averageHeight;
     str = @"成交额";
     textRect.origin.y = y;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
     [str drawInRect:textRect withAttributes:attributes];
     
     //5.420
     value = stockMsg[@"turnOver"];
     str = value;
-    attributes = [self getTextAttributesWithFontSize:KLine_Const_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
+    attributes = [self getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
     [str drawInRect:textRect withAttributes:attributes];
     
     y = firstLineSmallFontY;

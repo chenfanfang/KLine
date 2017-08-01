@@ -1,14 +1,14 @@
 //
-//  VolumeView.m
+//  ChartsDetailView.m
 //  KLine
 //
-//  Created by 陈蕃坊 on 2017/7/29.
+//  Created by chenfanfang on 2017/8/1.
 //  Copyright © 2017年 DanDanLiCai. All rights reserved.
 //
 
-#import "VolumeView.h"
+#import "ChartsDetailView.h"
 
-@implementation VolumeView
+@implementation ChartsDetailView
 
 /*
 // Only override drawRect: if you perform custom drawing.

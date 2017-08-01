@@ -11,13 +11,18 @@
 //model
 #import "TimeLineTotalModel.h"
 
+//view
+#import "ChartsDetailView.h"
+
 @interface ChartsContentView()
 
 //分时图数据模型
 @property (nonatomic, strong) TimeLineTotalModel *timeLineTotalModel;
 
+/** 详细信息的view */
+@property (nonatomic, weak) ChartsDetailView *detailView;
 
-
+//图表类型
 @property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
 
 /** 区间个数 */
@@ -26,10 +31,30 @@
 /** 时间数组 */
 @property (nonatomic, strong) NSArray *timeArr;
 
+/** 当前状态 是否显示详细信息(长按会触发) */
+@property (nonatomic, assign) BOOL showDetail;
+
+
+
 @end
 
 @implementation ChartsContentView
 
+
+//=================================================================
+//                              初始化
+//=================================================================
+#pragma mark - 初始化
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        
+        //长按手势
+        UILongPressGestureRecognizer *longGes = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+        [self addGestureRecognizer:longGes];
+    }
+    return self;
+}
 
 //=================================================================
 //                           懒加载
@@ -53,6 +78,19 @@
     }
     
     return _timeArr;
+}
+
+- (ChartsDetailView *)detailView {
+    if (_detailView == nil) {
+        UIView *chartsMainView = self.superview.superview;
+        for (UIView *subView in chartsMainView.subviews) {
+            if ([subView isMemberOfClass:[ChartsDetailView class]]) {
+                _detailView = (ChartsDetailView *)subView;
+                break;
+            }
+        }
+    }
+    return _detailView;
 }
 
 //=================================================================
@@ -107,12 +145,17 @@
     [self drawDateInRect:CGRectMake(x + 1, y, width - 2, height) ctx:ctx];
     
     
-    //绘制成交量
+    //=================
+    //   绘制成交量
+    //=================
     y = y + height;
     height = rect.size.height - y;
     [self drawVolumeInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
     
+    //=================
+    //   绘制详细信息
+    //=================
     
     
 }
@@ -143,10 +186,6 @@
         CGContextStrokePath(ctx);
     }
     
-    
-    
-    
-    
 }
 
 //=================================================================
@@ -163,6 +202,10 @@
 //=================================================================
 #pragma mark - 绘制折线图
 - (void)drawChartsLineInRect:(CGRect)rect ctx:(CGContextRef)ctx {
+    
+    if (self.showDetail) {
+        return;
+    }
     
     CGFloat rectHeight = rect.size.height;
     CGFloat maxY = rect.size.height + rect.origin.y;
@@ -259,6 +302,10 @@
 #pragma mark - 绘制日期、时间
 - (void)drawDateInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
+    if (self.showDetail) {
+        return;
+    }
+    
     CGContextSetFillColorWithColor(ctx, KLine_Color_BackgroundColor.CGColor);
     CGContextAddRect(ctx, rect);
     CGContextFillPath(ctx);
@@ -295,6 +342,10 @@
 //=================================================================
 #pragma mark - 绘制成交量
 - (void)drawVolumeInRect:(CGRect)rect ctx:(CGContextRef)ctx {
+    
+    if (self.showDetail) {
+        return;
+    }
     
     CGContextSetStrokeColorWithColor(ctx, KLine_Color_BackgroundLineColor.CGColor);
     
@@ -364,20 +415,15 @@
 
 
 //=================================================================
-//                           手势的处理
+//                           长按手势的处理
 //=================================================================
-#pragma mark - 手势的处理
+#pragma mark - 长按手势的处理
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@",touches);
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@", touches);
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"end");
+- (void)longPress:(UILongPressGestureRecognizer *)ges {
+    CGPoint point = [ges locationInView:self];
+    NSLog(@"%@",ges);
+    
+    
 }
 
 

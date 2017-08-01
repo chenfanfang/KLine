@@ -14,6 +14,7 @@
 //view
 #import "ChartsTopView.h"
 #import "ChartsBottomScrollView.h"
+#import "ChartsDetailView.h"
 
 @interface ChartsMainView()
 
@@ -22,6 +23,9 @@
 
 /** 下部分(绘画k线图部分) */
 @property (nonatomic, weak) ChartsBottomScrollView *bottomView;
+
+/** 显示详细信息的view */
+@property (nonatomic, weak) ChartsDetailView *detailView;
 
 /** 图标类型(分时、日K、周K....) */
 @property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
@@ -43,7 +47,11 @@
         
         [self topView];
         
+        [self detailView];
+        
         [self bottomView];
+        
+        [self bringSubviewToFront:self.detailView];
         
     }
     
@@ -91,6 +99,24 @@
         
     }
     return _bottomView;
+}
+
+- (ChartsDetailView *)detailView {
+    if (_detailView == nil) {
+        ChartsDetailView *detailView = [[ChartsDetailView alloc] init];
+        [self addSubview:detailView];
+        _detailView = detailView;
+        [detailView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.topView.mas_bottom);
+            make.left.mas_equalTo(self).offset(KLine_Const_Margin);
+            make.right.mas_equalTo(self).offset(-KLine_Const_Margin);
+            make.bottom.mas_equalTo(self).offset(-KLine_Const_Margin);
+        }];
+        
+        //取消交互，让点击事件穿透
+        detailView.userInteractionEnabled = NO;
+    }
+    return _detailView;
 }
 
 

@@ -42,11 +42,20 @@
 //volume的间距
 #define KLine_Const_VolumeMargin 1
 
+
+//=================================================================
+//                           字体大小
+//=================================================================
+#pragma mark - 字体大小
+
 //股票信息大号字体
-#define KLine_Const_StockMsgBigFontSize 20
+#define KLine_FontSize_StockMsgBigFontSize 20
 
 //股票信息小号字体
-#define KLine_Const_StockMsgSmallFontSize 12
+#define KLine_FontSize_StockMsgSmallFontSize 12
+
+//选择k线图类型 按钮字体的大小
+#define KLine_FontSize_SelecteTypeBtnFontSize 15
 
 //=================================================================
 //                           颜色
@@ -84,6 +93,9 @@
 
 //白色
 #define KLine_Color_WhiteColor KLineColor(255, 255, 255)
+
+//蓝色
+#define KLine_Color_BlueColor [UIColor blueColor]
 
 //=================================================================
 //                           import
