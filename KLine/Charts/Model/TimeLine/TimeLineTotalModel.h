@@ -17,6 +17,9 @@
 /** 昨收 */
 @property (nonatomic, assign) CGFloat preClosePrice;
 
+/** 日期 */
+@property (nonatomic, copy) NSString *date;
+
 /** 数据数组 */
 @property (nonatomic, strong) NSArray<TimeLineModel *> *dataArr;
 

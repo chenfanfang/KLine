@@ -18,7 +18,7 @@
 /** 价钱 */
 @property (nonatomic, assign) CGFloat price;
 
-/** 均价 */
+/** 均价(在转模型的时候计算出来的) */
 @property (nonatomic, assign) CGFloat averagePrice;
 
 /** 成交数 */
@@ -27,6 +27,15 @@
 /** 成交金额 */
 @property (nonatomic, assign) NSInteger totalMoney;
 
+
+//============================================
+//   下面两个属性是在长按显示详细信息的时候计算出来的
+//============================================
+/** 涨跌幅 */
+@property (nonatomic, copy) NSString *upAndDownRate;
+
+/** 涨跌额 */
+@property (nonatomic, assign) CGFloat upAndDown;
 
 + (instancetype)modelWithDataArr:(NSArray *)dataArr;
 

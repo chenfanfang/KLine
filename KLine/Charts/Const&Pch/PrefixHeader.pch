@@ -45,11 +45,28 @@
 //长按显示的横竖线的宽度
 #define KLine_Const_DetailLineWidth 1
 
+//长按显示的时间的宽度
+#define KLine_Const_DetailTimeWidth 60
+
+//长按显示的左边价钱、右边涨跌幅的宽度
+#define KLine_Const_DetailSideDataWidth 40
+
+//长按显示的时间、左边边的数据的高度
+#define KLine_Const_DetailSmallMaskHeight 20
+
+//长按显示的详细信息的宽度
+#define KLine_Const_DetailMessageMaskWidth 100
+
+//长按显示的详细信息的margin 和 padding
+#define KLine_Const_DetailMessageMaskMarginAndPadding 5
 
 //=================================================================
 //                           字体大小
 //=================================================================
 #pragma mark - 字体大小
+
+//日期、时间的字体大小
+#define KLine_FontSize_TimeAndDateFontSize 13
 
 //股票信息大号字体
 #define KLine_FontSize_StockMsgBigFontSize 20
@@ -62,6 +79,9 @@
 
 //详细数据的左边 价钱  右边涨跌幅的字体大小
 #define KLine_FontSize_DetailLeftAndRightFontSize 10
+
+//长按显示的详细信息的字体大小
+#define KLine_FontSize_DetailMessageMaskFontSize 8
 
 //=================================================================
 //                           颜色
@@ -97,11 +117,17 @@
 //灰色
 #define KLine_Color_GrayColor KLineColor(190, 202, 217)
 
+//深灰色
+#define KLine_Color_DarkGrayColor KLineColor(40, 43, 55)
+
 //白色
 #define KLine_Color_WhiteColor KLineColor(255, 255, 255)
 
 //蓝色
 #define KLine_Color_BlueColor [UIColor blueColor]
+
+//黑色
+#define KLine_Color_BlackColor [UIColor blackColor]
 
 //=================================================================
 //                           import

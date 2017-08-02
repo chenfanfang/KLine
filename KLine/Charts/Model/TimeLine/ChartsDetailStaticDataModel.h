@@ -47,8 +47,8 @@
 /** 成交量图所在位置 */
 @property (nonatomic, assign) CGRect volumeRect;
 
-/** 最少成交量 */
-@property (nonatomic, assign) NSInteger minVolume;
+/** 最多成交量 */
+@property (nonatomic, assign) NSInteger maxVolume;
 
 /** 成交量图垂直方向的区间数 */
 @property (nonatomic, assign) NSInteger volumeVerticalSections;

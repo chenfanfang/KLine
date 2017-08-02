@@ -13,6 +13,7 @@
 + (instancetype)modelWithDict:(NSDictionary *)dict {
     TimeLineTotalModel *totalModel = [TimeLineTotalModel new];
     totalModel.preClosePrice = [dict[@"preClosePrice"] floatValue];
+    totalModel.date = dict[@"date"];
     NSArray *dataArr = dict[@"data"];
     NSMutableArray *arrM = [NSMutableArray array];
     NSInteger sumPrice = 0;

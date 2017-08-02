@@ -21,7 +21,16 @@
 /** TimeLineModel */
 @property (nonatomic, strong) TimeLineModel *timeLineModel;
 
+/** 日期 */
+@property (nonatomic, copy) NSString *date;
+
 /** 所处的rect */
 @property (nonatomic, assign) CGRect rect;
+
+/** 时间、日期所处的rect */
+@property (nonatomic, assign) CGRect timeRect;
+
+/** 是否是第一个值(长按  第一个显示的值)(用于处理详细信息值第一次显示的位置) */
+@property (nonatomic, assign) BOOL isShowFirstValue;
 
 @end

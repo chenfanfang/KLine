@@ -334,7 +334,7 @@
     
     NSDictionary *attributes = @{
                                 NSForegroundColorAttributeName : [UIColor lightGrayColor],
-                                NSFontAttributeName : [UIFont systemFontOfSize:13]
+                                NSFontAttributeName : [UIFont systemFontOfSize:KLine_FontSize_TimeAndDateFontSize]
                                 };
 
     CGFloat width = rect.size.width / self.sectionCount;
@@ -347,6 +347,8 @@
         timeStr = self.timeArr[i];
         [timeStr drawAtPoint:CGPointMake(x, y) withAttributes:attributes];
     }
+    
+    _detailView.dynamicDataModel.timeRect = rect;
     
 }
 
@@ -391,15 +393,9 @@
     NSArray <TimeLineModel *>*modelArr = self.timeLineTotalModel.dataArr;
     NSArray *volumeArr = [modelArr valueForKeyPath:@"amount"];
     NSInteger maxVolume = [[volumeArr valueForKeyPath:@"@max.integerValue"] integerValue];
-    NSInteger minVolume = [[volumeArr valueForKeyPath:@"@min.integerValue"] integerValue];
-    
-    
-    
-    //差值
-    NSInteger deltaVolume = maxVolume - minVolume;
     
     //每像素代表多少成交量
-    CGFloat verticalPerPxVolume = deltaVolume / rectHeight;
+    CGFloat verticalPerPxVolume = maxVolume / rectHeight;
     
     //区间个数
     NSInteger sectionCount = 330;
@@ -423,7 +419,7 @@
         
         prePrice = model.price;
         
-        volumeHeight = (model.amount - minVolume) / verticalPerPxVolume;
+        volumeHeight = model.amount / verticalPerPxVolume;
         volumeY = (rectHeight - volumeHeight) + minY;
         volumeX = (KLine_Const_VolumeMargin + volumeWidth) * i;
         CGRect volumeRect = CGRectMake(volumeX, volumeY, volumeWidth, volumeHeight);
@@ -434,7 +430,7 @@
     
     
     _detailView.staticDataModel.volumeRect = rect;
-    _detailView.staticDataModel.minVolume = minVolume;
+    _detailView.staticDataModel.maxVolume = maxVolume;
     _detailView.staticDataModel.volumeVerticalSections = verticalSections;
     _detailView.staticDataModel.volumeVerticalPerSectionHeight = verticalPerSectionHeight;
     _detailView.staticDataModel.verticalPerPxVolume = verticalPerPxVolume;
@@ -453,6 +449,13 @@
         _detailView.dynamicDataModel.isLongPress = NO;
         [self.detailView reDraw];
         return;
+    }
+    
+    if (ges.state == UIGestureRecognizerStateBegan) {
+        _detailView.dynamicDataModel.isShowFirstValue = YES;
+        
+    } else {
+        _detailView.dynamicDataModel.isShowFirstValue = NO;
     }
     
     
@@ -475,6 +478,7 @@
     
     TimeLineModel *model = self.timeLineTotalModel.dataArr[index];
     _detailView.dynamicDataModel.timeLineModel = model;
+    _detailView.dynamicDataModel.date = self.timeLineTotalModel.date;
     _detailView.dynamicDataModel.touchPoint = touchPoint;
     _detailView.dynamicDataModel.isLongPress = YES;
     [self.detailView reDraw];
