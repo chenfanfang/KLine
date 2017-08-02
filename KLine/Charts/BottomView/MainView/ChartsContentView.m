@@ -10,17 +10,22 @@
 
 //model
 #import "TimeLineTotalModel.h"
+#import "ChartsDetailModel.h"
 
 //view
 #import "ChartsDetailView.h"
 
 @interface ChartsContentView()
 
+
 //分时图数据模型
 @property (nonatomic, strong) TimeLineTotalModel *timeLineTotalModel;
 
 /** 详细信息的view */
 @property (nonatomic, weak) ChartsDetailView *detailView;
+
+/** ChartsDetailView上显示的相关数据的模型 */
+@property (nonatomic, strong) ChartsDetailModel *detailModel;
 
 //图表类型
 @property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
@@ -31,8 +36,7 @@
 /** 时间数组 */
 @property (nonatomic, strong) NSArray *timeArr;
 
-/** 当前状态 是否显示详细信息(长按会触发) */
-@property (nonatomic, assign) BOOL showDetail;
+
 
 
 
@@ -93,6 +97,14 @@
     return _detailView;
 }
 
+- (ChartsDetailModel *)detailModel {
+    if (_detailModel == nil) {
+        _detailModel = [ChartsDetailModel new];
+    }
+    return _detailModel;
+}
+
+
 //=================================================================
 //                           绘图
 //=================================================================
@@ -134,7 +146,7 @@
     //=================
     //    绘制折线图
     //=================
-    height = (rect.size.height - KLine_Const_MAHeight - KLine_Const_DateHeight - KLine_Const_MAVOLHeight) * KLine_Const_LinechartHeightRate;
+    height = (rect.size.height - KLine_Const_MAHeight - KLine_Const_DateHeight) * KLine_Const_LinechartHeightRate;
     [self drawChartsLineInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
     //=================
@@ -203,10 +215,6 @@
 #pragma mark - 绘制折线图
 - (void)drawChartsLineInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
-    if (self.showDetail) {
-        return;
-    }
-    
     CGFloat rectHeight = rect.size.height;
     CGFloat maxY = rect.size.height + rect.origin.y;
     
@@ -243,7 +251,9 @@
     self.detailView.minPrice = minPrice;
     self.detailView.preClosePrice = self.timeLineTotalModel.preClosePrice;
     self.detailView.topMargin = averageHeight;
+    self.detailView.chartsLineSections = lineCount;
     
+    [self.detailView reDraw];
     
     //=================
     //     绘制折现图
@@ -303,6 +313,9 @@
     CGContextStrokePath(ctx);
     
     
+    
+    
+    
 }
 
 //=================================================================
@@ -310,10 +323,6 @@
 //=================================================================
 #pragma mark - 绘制日期、时间
 - (void)drawDateInRect:(CGRect)rect ctx:(CGContextRef)ctx {
-    
-    if (self.showDetail) {
-        return;
-    }
     
     CGContextSetFillColorWithColor(ctx, KLine_Color_BackgroundColor.CGColor);
     CGContextAddRect(ctx, rect);
@@ -352,10 +361,6 @@
 #pragma mark - 绘制成交量
 - (void)drawVolumeInRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
-    if (self.showDetail) {
-        return;
-    }
-    
     CGContextSetStrokeColorWithColor(ctx, KLine_Color_BackgroundLineColor.CGColor);
     
     //绘制3条横线（3个区块）
@@ -380,9 +385,17 @@
     
     //获取交易量的  最大值，最小值，计算差值
     NSArray <TimeLineModel *>*modelArr = self.timeLineTotalModel.dataArr;
-    NSArray *priceArr = [modelArr valueForKeyPath:@"amount"];
-    NSInteger maxVolume = [[priceArr valueForKeyPath:@"@max.integerValue"] integerValue];
-    NSInteger minVolume = [[priceArr valueForKeyPath:@"@min.integerValue"] integerValue];
+    NSArray *volumeArr = [modelArr valueForKeyPath:@"amount"];
+    NSInteger maxVolume = [[volumeArr valueForKeyPath:@"@max.integerValue"] integerValue];
+    NSInteger minVolume = [[volumeArr valueForKeyPath:@"@min.integerValue"] integerValue];
+    
+    
+    self.detailView.maxVolumn = maxVolume;
+    self.detailView.minVolumn = minVolume;
+    self.detailView.volumnSections = lineCount;
+    
+    [self.detailView reDraw];
+    
     
     //差值
     NSInteger deltaVolume = maxVolume - minVolume;
@@ -429,9 +442,37 @@
 #pragma mark - 长按手势的处理
 
 - (void)longPress:(UILongPressGestureRecognizer *)ges {
-    CGPoint point = [ges locationInView:self];
-    NSLog(@"%@",ges);
     
+    //长按结束
+    if (ges.state == UIGestureRecognizerStateEnded) {
+        self.detailView.isLongPress = NO;
+        [self.detailView reDraw];
+        return;
+    }
+    
+    
+    CGPoint point = [ges locationInView:self.detailView];
+    //区间个数
+    NSInteger sectionCount = 330;
+    
+    CGFloat volumeWidth = (self.frame.size.width - (sectionCount - 1) * KLine_Const_VolumeMargin) / sectionCount;
+    
+    NSInteger index = (NSInteger)(point.x / (volumeWidth + KLine_Const_VolumeMargin));
+    
+    //容错处理，防止数组越界
+    if (index < 0 || index > self.timeLineTotalModel.dataArr.count - 1) {
+        return;
+    }
+    
+    CGFloat touchX = index * (volumeWidth + KLine_Const_VolumeMargin) + volumeWidth / 2.0;
+    CGFloat touchY = point.y;
+    CGPoint touchPoint = CGPointMake(touchX, touchY);
+    
+    TimeLineModel *model = self.timeLineTotalModel.dataArr[index];
+    self.detailView.timeLineModel = model;
+    self.detailView.touchPoint = touchPoint;
+    self.detailView.isLongPress = YES;
+    [self.detailView reDraw];
     
 }
 

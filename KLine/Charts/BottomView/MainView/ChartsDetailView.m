@@ -10,6 +10,10 @@
 
 @implementation ChartsDetailView
 
+- (void)reDraw {
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
@@ -21,12 +25,29 @@
     CGFloat height = 0;
     CGRect drawRect;
     
-    //=====================
-    //   绘制左边、右边的数据
-    //=====================
-    height = (rect.size.width - KLine_Const_DateHeight) * KLine_Const_LinechartHeightRate;
+    //==========================
+    //   绘制折线图 左边、右边的数据
+    //==========================
+    height = (rect.size.height - KLine_Const_DateHeight) * KLine_Const_LinechartHeightRate;
     drawRect = CGRectMake(x, y, width, height);
-    [self drawLeftDataWithRect:drawRect ctx:ctx];
+    [self drawChartsLineLeftAndRightDataWithRect:drawRect ctx:ctx];
+    
+    //=====================
+    //   绘制成交量 左边的数据
+    //=====================
+    height = (rect.size.height - KLine_Const_DateHeight) * (1 - KLine_Const_LinechartHeightRate);
+    y = rect.size.height - height;
+    drawRect = CGRectMake(x, y, width, height);
+    [self drawVolumeLeftDataWithRect:drawRect ctx:ctx];
+    
+    
+    //======================
+    //   绘制长按时候显示的信息
+    //======================
+    if (self.isLongPress == YES) {
+        [self drawTouchShowDataWithRect:rect ctx:ctx];
+    }
+    
 }
 
 //=================================================================
@@ -34,7 +55,7 @@
 //=================================================================
 #pragma mark - 绘制左边的数据
 
-- (void)drawLeftDataWithRect:(CGRect)rect ctx:(CGContextRef)ctx {
+- (void)drawChartsLineLeftAndRightDataWithRect:(CGRect)rect ctx:(CGContextRef)ctx {
     
     CGFloat rectHeight = rect.size.height;
     
@@ -60,12 +81,17 @@
     NSString *upAndDownStr = nil;
     UIColor *color = nil;
     NSDictionary *attributes = nil;
+    CGRect drawRect;
+    CGFloat x = rect.origin.x;
+    CGFloat y;
+    CGFloat width = rect.size.width;
+    CGFloat height = [KLineTool sizeWithString:@"别理我，我只是计算文字的高度" attributes:attributes].height;
     
     for (int i = 0; i < self.chartsLineSections; i++) {
         price = self.minPrice + i * averagePxPrice * averageSectionHeight;
         upAndDown = minUpAndDown + i * averagePxUpAndDown * averageSectionHeight;
         priceStr = [NSString stringWithFormat:@"%.3f",price];
-        upAndDownStr = [NSString stringWithFormat:@"%.2f%%",upAndDown];
+        upAndDownStr = [NSString stringWithFormat:@"%.2f%%",upAndDown * 100];
         
         if (price < self.preClosePrice) {
             color = KLine_Color_StockFallColor;
@@ -76,9 +102,79 @@
             color = KLine_Color_StockRiseColor;
         }
         
-//        attributes = 
+        //左边数据
+        attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_DetailLeftAndRightFontSize color:color alignment:NSTextAlignmentLeft];
+        
+        y = rectHeight - height - averageSectionHeight * i;
+        drawRect = CGRectMake(x, y, width, height);
+        [priceStr drawInRect:drawRect withAttributes:attributes];
+        
+        //右边数据
+        attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_DetailLeftAndRightFontSize color:color alignment:NSTextAlignmentRight];
+        [upAndDownStr drawInRect:drawRect withAttributes:attributes];
         
     }
+}
+
+
+//=================================================================
+//                       绘制成交量 左边的数据
+//=================================================================
+#pragma mark - 绘制成交量 左边的数据
+
+- (void)drawVolumeLeftDataWithRect:(CGRect)rect ctx:(CGContextRef)ctx {
+    
+    CGFloat rectMaxY = CGRectGetMaxY(rect);
+    CGFloat rectHeight = rect.size.height;
+    CGFloat sectionHeight = rectHeight / self.volumnSections;
+    CGFloat averagePxValume = (self.maxVolumn - self.minVolumn) / rectHeight;
+    NSString *drawStr = nil;
+    NSDictionary *attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_DetailLeftAndRightFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
+    CGFloat fontHeight = [KLineTool sizeWithString:@"请忽略我，我只是用来计算文字高度的" attributes:attributes].height;
+    NSInteger volume = 0;
+    CGRect drawRect;
+    CGFloat drawY = 0;
+    
+    for (int i = 0; i < self.volumnSections; i++) {
+        drawY = rectMaxY - sectionHeight * i - fontHeight;
+        volume = self.minVolumn + averagePxValume * sectionHeight * i;
+        drawStr = [NSString stringWithFormat:@"%zd",volume];
+        drawRect = CGRectMake(rect.origin.x, drawY, rect.size.width, fontHeight);
+        
+        [drawStr drawInRect:drawRect withAttributes:attributes];
+    }
+    
+}
+
+
+//=================================================================
+//                      绘制长按时该显示的信息
+//=================================================================
+#pragma mark - 绘制长按时该显示的信息
+
+- (void)drawTouchShowDataWithRect:(CGRect)rect ctx:(CGContextRef)ctx {
+    CGFloat rectX = rect.origin.x;
+    CGFloat rectY = rect.origin.y;
+    CGFloat rectW = rect.size.width;
+    CGFloat rectH = rect.size.height;
+    CGFloat touchX = self.touchPoint.x;
+    CGFloat touchY = self.touchPoint.y;
+    
+    CGContextSetStrokeColorWithColor(ctx, KLine_Color_GrayColor.CGColor);
+    //=================
+    //      横线
+    //=================
+    CGContextMoveToPoint(ctx, rectX, touchY);
+    CGContextAddLineToPoint(ctx, rectW, touchY);
+    CGContextStrokePath(ctx);
+    
+    //=================
+    //      竖线
+    //=================
+    CGContextMoveToPoint(ctx, touchX, rectY);
+    CGContextAddLineToPoint(ctx, touchX, rectH);
+    CGContextStrokePath(ctx);
+    
     
 }
 

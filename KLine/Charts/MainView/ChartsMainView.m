@@ -106,6 +106,7 @@
         ChartsDetailView *detailView = [[ChartsDetailView alloc] init];
         [self addSubview:detailView];
         _detailView = detailView;
+        _detailView.backgroundColor = [UIColor clearColor];
         [detailView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.topView.mas_bottom).offset(KLine_Const_MAHeight);
             make.left.mas_equalTo(self).offset(KLine_Const_Margin);

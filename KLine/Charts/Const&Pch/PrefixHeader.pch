@@ -28,7 +28,7 @@
 #define KLine_Const_Margin 10
 
 //在contentView中heigh = height - MAHeight - DateHeight 之后 折线图 高度比例
-#define KLine_Const_LinechartHeightRate 0.7
+#define KLine_Const_LinechartHeightRate 0.6
 
 //显示MA数据的高度
 #define KLine_Const_MAHeight 30
@@ -41,6 +41,9 @@
 
 //volume的间距
 #define KLine_Const_VolumeMargin 1
+
+//长按显示的横竖线的宽度
+#define KLine_Const_DetailLineWidth 1
 
 
 //=================================================================
@@ -58,7 +61,7 @@
 #define KLine_FontSize_SelecteTypeBtnFontSize 15
 
 //详细数据的左边 价钱  右边涨跌幅的字体大小
-#define KLIne_FontSize_DetailLeftAndRightFontSize 10
+#define KLine_FontSize_DetailLeftAndRightFontSize 10
 
 //=================================================================
 //                           颜色
