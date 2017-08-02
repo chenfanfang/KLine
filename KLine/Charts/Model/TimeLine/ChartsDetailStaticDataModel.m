@@ -6,8 +6,8 @@
 //  Copyright © 2017年 DanDanLiCai. All rights reserved.
 //
 
-#import "ChartsDetailModel.h"
+#import "ChartsDetailStaticDataModel.h"
 
-@implementation ChartsDetailModel
+@implementation ChartsDetailStaticDataModel
 
 @end

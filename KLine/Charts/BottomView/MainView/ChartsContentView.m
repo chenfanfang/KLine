@@ -10,7 +10,8 @@
 
 //model
 #import "TimeLineTotalModel.h"
-#import "ChartsDetailModel.h"
+#import "ChartsDetailStaticDataModel.h"
+#import "ChartsDetailDynamicDataModel.h"
 
 //view
 #import "ChartsDetailView.h"
@@ -23,9 +24,6 @@
 
 /** 详细信息的view */
 @property (nonatomic, weak) ChartsDetailView *detailView;
-
-/** ChartsDetailView上显示的相关数据的模型 */
-@property (nonatomic, strong) ChartsDetailModel *detailModel;
 
 //图表类型
 @property (nonatomic, assign) KLine_Enum_ChartsType chartsType;
@@ -97,12 +95,6 @@
     return _detailView;
 }
 
-- (ChartsDetailModel *)detailModel {
-    if (_detailModel == nil) {
-        _detailModel = [ChartsDetailModel new];
-    }
-    return _detailModel;
-}
 
 
 //=================================================================
@@ -122,6 +114,8 @@
     if (self.timeLineTotalModel == nil) {
         return;
     }
+    
+    [self detailView];
     
     self.sectionCount = 11;
     
@@ -164,10 +158,8 @@
     height = rect.size.height - y;
     [self drawVolumeInRect:CGRectMake(x, y, width, height) ctx:ctx];
     
-    
-    //=================
-    //   绘制详细信息
-    //=================
+
+    [_detailView reDraw];
     
     
 }
@@ -198,6 +190,8 @@
         CGContextStrokePath(ctx);
     }
     
+    _detailView.dynamicDataModel.rect = rect;
+    
 }
 
 //=================================================================
@@ -218,15 +212,16 @@
     CGFloat rectHeight = rect.size.height;
     CGFloat maxY = rect.size.height + rect.origin.y;
     
-    NSInteger lineCount = 6;
-    CGFloat averageHeight = rectHeight / lineCount;
+    //垂直区间数
+    NSInteger verticalSections = 6;
+    CGFloat verticalPerSectionHeight = rectHeight / verticalSections;
     CGFloat startX = rect.origin.x;
     CGFloat endX = rect.size.width;
     CGFloat y = rect.origin.y;
     
     //画横线
-    for (int i = 1; i <= lineCount; i++) {
-        y = y + averageHeight;
+    for (int i = 1; i <= verticalSections; i++) {
+        y = y + verticalPerSectionHeight;
         CGContextMoveToPoint(ctx, startX, y);
         CGContextAddLineToPoint(ctx, endX, y);
         CGContextStrokePath(ctx);
@@ -241,19 +236,11 @@
     
     
     //计算竖直方向每个像素所代表的价钱（为了使不会太过于充满屏幕，减去一点高度）
-    CGFloat averagePxPrice = deltaPrice / (rectHeight - averageHeight);
+    CGFloat verticalPerPxPrice = deltaPrice / (rectHeight - verticalPerSectionHeight);
     //计算水平方向每个分钟占的宽度
     CGFloat averageTimeWidth = rect.size.width / 330;
     
     
-    
-    self.detailView.maxPrice = maxPrice;
-    self.detailView.minPrice = minPrice;
-    self.detailView.preClosePrice = self.timeLineTotalModel.preClosePrice;
-    self.detailView.topMargin = averageHeight;
-    self.detailView.chartsLineSections = lineCount;
-    
-    [self.detailView reDraw];
     
     //=================
     //     绘制折现图
@@ -265,7 +252,7 @@
     for (int i = 0; i < modelArr.count; i++) {
         TimeLineModel *model = modelArr[i];
         price = model.price;
-        CGFloat height = (price - minPrice) / averagePxPrice;
+        CGFloat height = (price - minPrice) / verticalPerPxPrice;
         lineX = i * averageTimeWidth;
         lineY = maxY - height;
         
@@ -283,7 +270,7 @@
     for (int i = 0; i < modelArr.count; i++) {
         TimeLineModel *model = modelArr[i];
         price = model.price;
-        CGFloat height = (price - minPrice) / averagePxPrice;
+        CGFloat height = (price - minPrice) / verticalPerPxPrice;
         lineX = i * averageTimeWidth;
         lineY = maxY - height;
         
@@ -300,7 +287,7 @@
     for (int i = 0; i < modelArr.count; i++) {
         TimeLineModel *model = modelArr[i];
         lineX = i * averageTimeWidth;
-        CGFloat heiht = (model.averagePrice - minPrice) / averagePxPrice;
+        CGFloat heiht = (model.averagePrice - minPrice) / verticalPerPxPrice;
         lineY = maxY - heiht;
         
         if (i == 0) {
@@ -314,8 +301,25 @@
     
     
     
+    _detailView.staticDataModel.chartRect = rect;
+    _detailView.staticDataModel.chartVerticalSections = verticalSections;
+    _detailView.staticDataModel.chartVerticalPerSectionHeight = verticalPerSectionHeight;
+    _detailView.staticDataModel.prePrice = self.timeLineTotalModel.preClosePrice;
+    _detailView.staticDataModel.minPrice = minPrice;
+    _detailView.staticDataModel.verticalPerPxPrice = verticalPerPxPrice;
     
     
+    //===========================
+    //   计算折线图左右边相关数据的值
+    //===========================
+    
+    //跌涨幅相关数据的计算
+    CGFloat maxUpAndDown = maxPrice / self.timeLineTotalModel.preClosePrice - 1;
+    CGFloat minUpAndDown = minPrice / self.timeLineTotalModel.preClosePrice - 1;
+    //竖直方向每一个像素代表的涨跌幅
+    CGFloat verticalPerPxUpAndDown = (maxUpAndDown - minUpAndDown) / (rectHeight - verticalPerSectionHeight);
+    _detailView.staticDataModel.minUpAndDown = minUpAndDown;
+    _detailView.staticDataModel.verticalPerPxUpAndDown = verticalPerPxUpAndDown;
 }
 
 //=================================================================
@@ -364,16 +368,16 @@
     CGContextSetStrokeColorWithColor(ctx, KLine_Color_BackgroundLineColor.CGColor);
     
     //绘制3条横线（3个区块）
-    NSInteger lineCount = 3;
+    NSInteger verticalSections = 3;
     CGFloat rectHeight = rect.size.height;
-    CGFloat averageHeight = rectHeight / lineCount;
+    CGFloat verticalPerSectionHeight = rectHeight / verticalSections;
     CGFloat width = rect.size.width;
     CGFloat minY = rect.origin.y;
     CGFloat y = 0;
     CGFloat startX = 0;
     CGFloat endX = width;
-    for (int i = 0; i < lineCount; i++) {
-        y = i * averageHeight + minY;
+    for (int i = 0; i < verticalSections; i++) {
+        y = i * verticalPerSectionHeight + minY;
         CGContextMoveToPoint(ctx, startX, y);
         CGContextAddLineToPoint(ctx, endX, y);
         CGContextStrokePath(ctx);
@@ -390,18 +394,12 @@
     NSInteger minVolume = [[volumeArr valueForKeyPath:@"@min.integerValue"] integerValue];
     
     
-    self.detailView.maxVolumn = maxVolume;
-    self.detailView.minVolumn = minVolume;
-    self.detailView.volumnSections = lineCount;
-    
-    [self.detailView reDraw];
-    
     
     //差值
     NSInteger deltaVolume = maxVolume - minVolume;
     
     //每像素代表多少成交量
-    CGFloat averagePxValume = deltaVolume / rectHeight;
+    CGFloat verticalPerPxVolume = deltaVolume / rectHeight;
     
     //区间个数
     NSInteger sectionCount = 330;
@@ -425,7 +423,7 @@
         
         prePrice = model.price;
         
-        volumeHeight = (model.amount - minVolume) / averagePxValume;
+        volumeHeight = (model.amount - minVolume) / verticalPerPxVolume;
         volumeY = (rectHeight - volumeHeight) + minY;
         volumeX = (KLine_Const_VolumeMargin + volumeWidth) * i;
         CGRect volumeRect = CGRectMake(volumeX, volumeY, volumeWidth, volumeHeight);
@@ -433,6 +431,13 @@
         CGContextFillPath(ctx);
     }
     
+    
+    
+    _detailView.staticDataModel.volumeRect = rect;
+    _detailView.staticDataModel.minVolume = minVolume;
+    _detailView.staticDataModel.volumeVerticalSections = verticalSections;
+    _detailView.staticDataModel.volumeVerticalPerSectionHeight = verticalPerSectionHeight;
+    _detailView.staticDataModel.verticalPerPxVolume = verticalPerPxVolume;
 }
 
 
@@ -445,7 +450,7 @@
     
     //长按结束
     if (ges.state == UIGestureRecognizerStateEnded) {
-        self.detailView.isLongPress = NO;
+        _detailView.dynamicDataModel.isLongPress = NO;
         [self.detailView reDraw];
         return;
     }
@@ -459,7 +464,7 @@
     
     NSInteger index = (NSInteger)(point.x / (volumeWidth + KLine_Const_VolumeMargin));
     
-    //容错处理，防止数组越界
+    //防止数组越界
     if (index < 0 || index > self.timeLineTotalModel.dataArr.count - 1) {
         return;
     }
@@ -469,9 +474,9 @@
     CGPoint touchPoint = CGPointMake(touchX, touchY);
     
     TimeLineModel *model = self.timeLineTotalModel.dataArr[index];
-    self.detailView.timeLineModel = model;
-    self.detailView.touchPoint = touchPoint;
-    self.detailView.isLongPress = YES;
+    _detailView.dynamicDataModel.timeLineModel = model;
+    _detailView.dynamicDataModel.touchPoint = touchPoint;
+    _detailView.dynamicDataModel.isLongPress = YES;
     [self.detailView reDraw];
     
 }
