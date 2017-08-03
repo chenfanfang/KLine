@@ -216,6 +216,24 @@ static NSString *unit = @"股";
     CGContextAddLineToPoint(ctx, touchX, rectMaxY);
     CGContextStrokePath(ctx);
     
+    //===================
+    //   当前价钱的那一点
+    //===================
+    CGRect chartRect = _staticDataModel.chartRect;
+    CGFloat pricePointX = touchX;
+    CGFloat pricePointY = CGRectGetMaxY(chartRect) -  (_dynamicDataModel.timeLineModel.price - _staticDataModel.minPrice) / _staticDataModel.verticalPerPxPrice;
+    CGContextSetFillColorWithColor(ctx, KLine_Color_BlueColor.CGColor);
+    CGContextAddArc(ctx, pricePointX, pricePointY, KLine_Const_DetailMessagePointRadius, 0, 2 * M_PI, 0);
+    CGContextFillPath(ctx);
+    
+    //=================
+    //   当前均价的那一点
+    //=================
+    pricePointY = CGRectGetMaxY(chartRect) -  (_dynamicDataModel.timeLineModel.averagePrice - _staticDataModel.minPrice) / _staticDataModel.verticalPerPxPrice;
+    CGContextSetFillColorWithColor(ctx, KLine_Color_TimeLineAveragePriceColor.CGColor);
+    CGContextAddArc(ctx, pricePointX, pricePointY, KLine_Const_DetailMessagePointRadius, 0, 2 * M_PI, 0);
+    CGContextFillPath(ctx);
+    
     //=================
     //      时间
     //=================
@@ -367,6 +385,17 @@ static NSString *unit = @"股";
     CGFloat textW = width - KLine_Const_DetailMessageMaskMarginAndPadding * 2;
     NSString *title;
     NSString *value;
+    
+    //涨跌幅
+    CGFloat upAndDown = [valuesArr[4] floatValue];
+    UIColor *stockColor = KLine_Color_WhiteColor;
+    if (upAndDown > 0) {
+        stockColor = KLine_Color_StockRiseColor;
+    } else if (upAndDown < 0) {
+        stockColor = KLine_Color_StockFallColor;
+    }
+    UIColor *valueColor;
+    
     for (int i = 0; i < titlesArr.count; i++) {
         textY = y + (fontHeight + KLine_Const_DetailMessageMaskMarginAndPadding) * i + KLine_Const_DetailMessageMaskMarginAndPadding;
     
@@ -379,7 +408,12 @@ static NSString *unit = @"股";
         
         //绘制value
         value = valuesArr[i];
-        attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_DetailMessageMaskFontSize color:KLine_Color_WhiteColor alignment:NSTextAlignmentRight];
+        if (i > 1 && i < 5) {
+            valueColor = stockColor;
+        } else {
+            valueColor = KLine_Color_WhiteColor;
+        }
+        attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_DetailMessageMaskFontSize color:valueColor alignment:NSTextAlignmentRight];
         [value drawInRect:textRect withAttributes:attributes];
         
     }

@@ -19,10 +19,10 @@
 #pragma mark - const
 
 //股票信息+选择k线图类型 的那个view的高度
-#define KLine_Const_TopViewHeight 100
+#define KLine_Const_TopViewHeight 80
 
 //选择k线图类型的高度
-#define KLine_Const_SelecteTypeHeight 40
+#define KLine_Const_SelecteTypeHeight 30
 
 //距离屏幕的距离
 #define KLine_Const_Margin 10
@@ -31,7 +31,7 @@
 #define KLine_Const_LinechartHeightRate 0.6
 
 //显示MA数据的高度
-#define KLine_Const_MAHeight 30
+#define KLine_Const_MAHeight 20
 
 //显示日期、时间的高度
 #define KLine_Const_DateHeight 30
@@ -55,10 +55,13 @@
 #define KLine_Const_DetailSmallMaskHeight 20
 
 //长按显示的详细信息的宽度
-#define KLine_Const_DetailMessageMaskWidth 100
+#define KLine_Const_DetailMessageMaskWidth 80
 
 //长按显示的详细信息的margin 和 padding
-#define KLine_Const_DetailMessageMaskMarginAndPadding 5
+#define KLine_Const_DetailMessageMaskMarginAndPadding 3
+
+//长按显示的点的半径
+#define KLine_Const_DetailMessagePointRadius 3
 
 //=================================================================
 //                           字体大小
@@ -124,7 +127,7 @@
 #define KLine_Color_WhiteColor KLineColor(255, 255, 255)
 
 //蓝色
-#define KLine_Color_BlueColor [UIColor blueColor]
+#define KLine_Color_BlueColor KLineColor(57, 122, 226)
 
 //黑色
 #define KLine_Color_BlackColor [UIColor blackColor]

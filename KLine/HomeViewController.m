@@ -8,10 +8,6 @@
 
 #import "HomeViewController.h"
 
-
-//controller
-#import "FullScreenViewController.h"
-
 //tools
 #import "HttpsManager.h"
 
@@ -119,7 +115,7 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscapeLeft;
+    return UIInterfaceOrientationMaskLandscapeRight;
 }
 
 

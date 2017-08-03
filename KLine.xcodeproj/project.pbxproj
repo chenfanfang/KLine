@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3325E1EE0AAC56A6214D493B /* libPods-KLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E53B1421AF9724D52AED88F6 /* libPods-KLine.a */; };
 		F62746E11F2F7732008CE891 /* ChartsTopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */; };
-		F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */; };
 		F656A0411F2C33AF007ED3EE /* dayKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03C1F2C33AF007ED3EE /* dayKLine.plist */; };
 		F656A0421F2C33AF007ED3EE /* monthKLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03D1F2C33AF007ED3EE /* monthKLine.plist */; };
 		F656A0431F2C33AF007ED3EE /* severalDaysTimeLine.plist in Resources */ = {isa = PBXBuildFile; fileRef = F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */; };
@@ -60,8 +59,6 @@
 		E53B1421AF9724D52AED88F6 /* libPods-KLine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KLine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62746DF1F2F7732008CE891 /* ChartsTopSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsTopSelectView.h; sourceTree = "<group>"; };
 		F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsTopSelectView.m; sourceTree = "<group>"; };
-		F656A0331F2C2EC8007ED3EE /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
-		F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		F656A03C1F2C33AF007ED3EE /* dayKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dayKLine.plist; sourceTree = "<group>"; };
 		F656A03D1F2C33AF007ED3EE /* monthKLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = monthKLine.plist; sourceTree = "<group>"; };
 		F656A03E1F2C33AF007ED3EE /* severalDaysTimeLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = severalDaysTimeLine.plist; sourceTree = "<group>"; };
@@ -307,8 +304,6 @@
 				F6C2418C1F25FF1500523628 /* AppDelegate.m */,
 				F6C2418E1F25FF1500523628 /* HomeViewController.h */,
 				F6C2418F1F25FF1500523628 /* HomeViewController.m */,
-				F656A0331F2C2EC8007ED3EE /* FullScreenViewController.h */,
-				F656A0341F2C2EC8007ED3EE /* FullScreenViewController.m */,
 				F6C241941F25FF1500523628 /* Assets.xcassets */,
 				F6C241961F25FF1500523628 /* LaunchScreen.storyboard */,
 				F6C241991F25FF1500523628 /* Info.plist */,
@@ -425,7 +420,8 @@
 				TargetAttributes = {
 					F6C241841F25FF1500523628 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = VTZF3N6YLQ;
+						ProvisioningStyle = Manual;
 					};
 					F6C2419D1F25FF1500523628 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -549,7 +545,6 @@
 				F6C241901F25FF1500523628 /* HomeViewController.m in Sources */,
 				F62746E11F2F7732008CE891 /* ChartsTopSelectView.m in Sources */,
 				F679C9221F2CDC5700FEF4A2 /* TimeLineTotalModel.m in Sources */,
-				F656A0351F2C2EC8007ED3EE /* FullScreenViewController.m in Sources */,
 				F6C2418D1F25FF1500523628 /* AppDelegate.m in Sources */,
 				F656A0541F2C508D007ED3EE /* ChartsMainView.m in Sources */,
 				F67845B81F305BB3005D3606 /* KLineTool.m in Sources */,
@@ -702,14 +697,17 @@
 			baseConfigurationReference = BB7B2D78CCC4423801E02A3C /* Pods-KLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VTZF3N6YLQ;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLine/Charts/Const&Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = KLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandan.licai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4181f5f8-6bbb-4f80-8db3-f46bd3c4be87";
+				PROVISIONING_PROFILE_SPECIFIER = Develop;
 			};
 			name = Debug;
 		};
@@ -718,14 +716,16 @@
 			baseConfigurationReference = 20027B18E832FAD90FE5CE64 /* Pods-KLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLine/Charts/Const&Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = KLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dandanlicai.KLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dandan.licai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

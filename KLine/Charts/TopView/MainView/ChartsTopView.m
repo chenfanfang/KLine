@@ -164,10 +164,13 @@
     
     widthFlag = x + textSize.width;
     
+    
+    static const CGFloat marginTop = 5;
+    
     //====================================
     //   已收盘 07/31 16:09 +0.050 +0.92%
     //====================================
-    y = averageHeight;
+    y = averageHeight + marginTop;
     x = 20;
     
     //已收盘 07/31 16:09
@@ -219,7 +222,7 @@
     //   最低  5.420
     //=================
     //最低
-    y = averageHeight;
+    y = averageHeight + marginTop;
     str = @"最低";
     textRect.origin.y = y;
     attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
@@ -275,7 +278,7 @@
     //   昨收  5.420
     //=================
     //昨收
-    y = averageHeight;
+    y = averageHeight + marginTop;
     str = @"昨收";
     textRect.origin.y = y;
     attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
@@ -314,7 +317,7 @@
     //   成交额  13.66亿
     //=================
     //成交额
-    y = averageHeight;
+    y = averageHeight + marginTop;
     str = @"成交额";
     textRect.origin.y = y;
     attributes = [KLineTool getTextAttributesWithFontSize:KLine_FontSize_StockMsgSmallFontSize color:KLine_Color_GrayColor alignment:NSTextAlignmentLeft];
