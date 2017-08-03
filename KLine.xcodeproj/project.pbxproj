@@ -188,8 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				F656A0511F2C508D007ED3EE /* MainView */,
-				F656A0591F2C5160007ED3EE /* SelectView */,
-				F656A0531F2C508D007ED3EE /* StockMsgView */,
 			);
 			path = TopView;
 			sourceTree = "<group>";
@@ -203,20 +201,6 @@
 				F62746E01F2F7732008CE891 /* ChartsTopSelectView.m */,
 			);
 			path = MainView;
-			sourceTree = "<group>";
-		};
-		F656A0531F2C508D007ED3EE /* StockMsgView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StockMsgView;
-			sourceTree = "<group>";
-		};
-		F656A0591F2C5160007ED3EE /* SelectView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SelectView;
 			sourceTree = "<group>";
 		};
 		F679C8FC1F2C57FB00FEF4A2 /* BottomView */ = {
