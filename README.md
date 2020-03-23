@@ -1,2 +1,2 @@
 # KLine
-仿照 富途牛牛 绘制的k线图
+本文技术不是绘制k线的最佳方案，本文绘制方法比较耗内存，请大家使用CAShapLayer配合UIBezierPath来绘制高性能的K线。
